@@ -142,8 +142,8 @@ function injectFooter() { /* Eski kodun aynısı */
                 <div>
                     <h4 class="font-bold uppercase tracking-widest text-xs mb-4" data-i18n="common.connect">CONNECT</h4>
                     <ul class="space-y-2 text-sm font-mono text-neutral-600">
-                        <li><a href="https://twitter.com/benyusk" target="_blank" class="hover:text-[#FF4F00]">Twitter</a></li>
-                        <li><a href="mailto:hello@piyongo.com" class="hover:text-[#FF4F00]">Contact</a></li>
+                        <li><a href="https://twitter.com/piyongo" target="_blank" class="hover:text-[#FF4F00]">Tiktok</a></li>
+                        <li><a href="https://instagram.com/piyongo" class="hover:text-[#FF4F00]">Instagram</a></li>
                     </ul>
                 </div>
             </div>
