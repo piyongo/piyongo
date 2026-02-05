@@ -86,8 +86,8 @@ function injectNavigation() { /* Eski kodun aynısı */
             </div>
             <nav class="flex flex-col gap-5">
                 <a href="${pathPrefix}index.html" class="font-mono text-xl font-bold hover:text-[#FF4F00] transition-colors" data-i18n="common.index">INDEX</a>
-                <a href="${pathPrefix}tools/index.html" class="font-mono text-xl font-bold hover:text-[#FF4F00] transition-colors" data-i18n="common.tools">TOOLS</a>
-                <a href="${pathPrefix}products/index.html" class="font-mono text-xl font-bold hover:text-[#FF4F00] transition-colors" data-i18n="common.guides">GUIDES</a>
+                <a href="${pathPrefix}about.html" class="font-mono text-xl font-bold hover:text-[#FF4F00] transition-colors" data-i18n="common.tools">ABOUT</a>
+                <a href="${pathPrefix}contact.html" class="font-mono text-xl font-bold hover:text-[#FF4F00] transition-colors" data-i18n="common.guides">CONTACT</a>
                 <div class="h-0.5 w-12 bg-black/10 my-2"></div>
                 <a href="#" class="font-mono text-base text-neutral-500 hover:text-[#FF4F00] transition-colors flex items-center gap-2">LOGIN <span class="text-[10px] bg-neutral-100 px-1 border border-neutral-200 rounded text-neutral-400">SOON</span></a>
                 <a href="#" class="font-mono text-base text-neutral-500 hover:text-[#FF4F00] transition-colors flex items-center gap-2">FAVORITES <span class="text-[10px] bg-neutral-100 px-1 border border-neutral-200 rounded text-neutral-400">SOON</span></a>
