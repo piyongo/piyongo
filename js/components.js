@@ -203,7 +203,7 @@ function initLanguageSystem() { /* Eski kodun aynısı */
  }
 function getCoffeeButtonHTML() { /* Eski kodun aynısı */ 
     return `
-    <a href="https://www.buymeacoffee.com/portavisa" target="_blank" class="btn-coffee-inviting">
+    <a href="https://www.ko-fi.com/piyongo" target="_blank" class="btn-coffee-inviting">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
             <path d="M38 12H90C96 12 100 18 100 24H28C28 18 32 12 38 12Z" stroke="currentColor" stroke-width="6" stroke-linejoin="round"/>
             <path d="M26 30H102V38C102 42 98 46 92 46H36C30 46 26 42 26 38V30Z" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
