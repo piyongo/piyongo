@@ -21,7 +21,7 @@ const TRANSLATIONS = {
             index: 'ANASAYFA',
             tools: 'ARAÇLAR',
             guides: 'REHBERLER',
-            about: 'HAKKINDA',
+            about: 'HAKKIMDA',
             contact: 'İLETİŞİM',
             buyMeACoffee: 'Kahve Ismarla',
             footer_desc: 'Kapsamlı rehberler, hesaplayıcılar ve akıllı araçlar. Hepsi bir arada. Tamamen ücretsiz, herkese açık bir kaynak.',
