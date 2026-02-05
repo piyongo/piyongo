@@ -51,10 +51,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => { const p = document.getElementById('tool-coffee-placeholder'); if(p && typeof getCoffeeButtonHTML === 'function') p.innerHTML = getCoffeeButtonHTML(); if(typeof initLanguageSystem === 'function') initLanguageSystem(); });
         const inputArea = document.getElementById('inputArea');
- /* --- FONTS --- */
-        .font-cute { font-family: 'Comic Neue', 'Comic Sans MS', cursive; font-weight: 700; }
-
-
+        
         function transform(type) {
             if(!inputArea.value) return;
             inputArea.classList.remove('border-black', 'focus:border-black'); inputArea.classList.add('border-[#FF4F00]', 'shadow-[0px_0px_15px_rgba(255,79,0,0.3)]');
