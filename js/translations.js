@@ -1,11 +1,15 @@
-/* js/translations.js - V17.0 (Full & Complete) */
+/**
+ * js/translations.js
+ * Multi-language Content Store (EN, TR, PT)
+ */
 
 const TRANSLATIONS = {
     // ============================================
-    // 1. GENEL METİNLER (Header, Footer, Meta)
+    // 1. GLOBAL UI (Header, Footer, Navigation)
     // ============================================
     common: {
         en: {
+            // Meta & Layout
             index: 'INDEX',
             tools: 'TOOLS',
             guides: 'GUIDES',
@@ -13,16 +17,19 @@ const TRANSLATIONS = {
             contact: 'Contact',
             buyMeACoffee: 'Buy Me A Coffee',
             footer_desc: 'Detailed guides, calculators, smart tools. All in one place. Completely free, an open resource for everyone.',
-            
-            // UX DECISION: Shortened for Mobile Fit
-            search_placeholder: 'Search', 
-            
-            no_results: 'NO DATA FOUND',
-            lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
-            footer_about: 'About', 
+            footer_about: 'About',
             footer_contact: 'Contact',
             
-            // Drawer Keys
+            // Search & States
+            search_placeholder: 'Search',
+            no_results: 'NO DATA FOUND',
+            
+            // Languages
+            lang_en: 'English', 
+            lang_tr: 'Türkçe', 
+            lang_pt: 'Português',
+            
+            // Mobile Drawer
             drawer_recent: "Recently Used",
             drawer_favs: "Favourites",
             drawer_cats: "Categories"
@@ -35,189 +42,152 @@ const TRANSLATIONS = {
             contact: 'İletişim',
             buyMeACoffee: 'Kahve Ismarla',
             footer_desc: 'Kapsamlı rehberler, hesaplayıcılar ve akıllı araçlar. Hepsi bir arada. Tamamen ücretsiz, herkese açık bir kaynak.',
+            footer_about: 'Hakkımda',
+            footer_contact: 'İletişim',
             
-// Drawer Keys
+            search_placeholder: 'Ara',
+            no_results: 'SONUÇ BULUNAMADI',
+            
+            lang_en: 'English', 
+            lang_tr: 'Türkçe', 
+            lang_pt: 'Português',
+            
             drawer_recent: "Son Kullanılanlar",
             drawer_favs: "Favorilerim",
-            drawer_cats: "Kategoriler",
-
-            // UX DECISION: Shortened for Mobile Fit
-            search_placeholder: 'Ara',
-            
-            no_results: 'SONUÇ BULUNAMADI',
-            lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
-            footer_about: 'Hakkımda', 
-            footer_contact: 'İletişim'
+            drawer_cats: "Kategoriler"
         },
         pt: {
             index: 'INÍCIO',
-            tools: 'FERRAMENTA',
+            tools: 'FERRAMENTAS',
             guides: 'GUIAS',
             about: 'Sobre',
             contact: 'Contato',
             buyMeACoffee: 'Pague Um Bica',
-            footer_desc: 'Guias detalhados e ferramentas inteligentes. Tudo num só lugar. Totalmente gratuito, um recurso aberto para todos.',
+            footer_desc: 'Guias detalhados e ferramentas inteligentes. Tudo num só lugar. Totalmente gratuito.',
+            footer_about: 'SOBRE',
+            footer_contact: 'CONTATO',
             
-// Drawer Keys
+            search_placeholder: 'Pesquisar',
+            no_results: 'NENHUM DADO',
+            
+            lang_en: 'English', 
+            lang_tr: 'Türkçe', 
+            lang_pt: 'Português',
+            
             drawer_recent: "Recentes",
             drawer_favs: "Favoritos",
-            drawer_cats: "Categorias",
-            // UX DECISION: Shortened for Mobile Fit
-            search_placeholder: 'Pesquisar',
-            no_results: 'NENHUM DADO ENCONTRADO',
-            lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
-            footer_about: 'SOBRE', 
-            footer_contact: 'CONTATO'
+            drawer_cats: "Categorias"
         }
     },
 
     // ============================================
-    // 2. UI ARAYÜZÜ (Filtreler, Butonlar, Uyarılar)
+    // 2. INTERFACE ELEMENTS (Buttons, Labels)
     // ============================================
     ui: {
         en: {
-            
-        // Filter labels
-        tag_ALL: 'All', tag_FAVS: 'Favs', tag_TEXT: 'Text', tag_FORMAT: 'Format', tag_GENERATE: 'Gen', tag_PRODUCT: 'Visa',
-
-            // FİLTRELER
+            // Filters
             tag_ALL: 'ALL', 
-            tag_FAVS: 'MY FAVS', 
+            tag_FAVS: 'FAVS', 
             tag_TEXT: 'TEXT', 
             tag_FORMAT: 'FORMAT', 
-            tag_GENERATE: 'GENERATE', 
-            tag_PRODUCT: 'PRODUCT',
+            tag_GENERATE: 'GEN', 
+            tag_PRODUCT: 'VISA',
 
-            // GENEL UI
+            // Input/Output
             input_label: 'WORKSPACE',
-            input_placeholder: 'Type or paste here',
+            input_placeholder: 'Type or paste content here...',
             result_label: 'RESULTS',
+            
+            // Common Actions
             btn_clear: 'CLEAR',
             btn_copy: 'COPY',
             msg_copied: 'COPIED!',
-            
-            // Tool Etiketleri
-            lbl_chars: 'CHARACTERS', 
-            lbl_words: 'WORDS', 
-            lbl_sentences: 'SENTENCES', 
-            lbl_paragraphs: 'PARAGRAPHS',
-            
-            // İşlem Butonları (Tüm Araçlar İçin)
+            btn_download: 'DOWNLOAD',
             btn_process: 'PROCESS',
+
+            // Text Tools Specific
             btn_upper: 'UPPERCASE', 
             btn_lower: 'LOWERCASE', 
             btn_sentence: 'SENTENCE CASE',
-            btn_capital: 'CAPITALIZED CASE',
-            btn_alternating: 'ALTERNATING CASE',
+            btn_capital: 'CAPITALIZED',
+            btn_alternating: 'ALTERNATING',
             btn_title: 'TITLE CASE',
-            btn_inverse: 'INVERSE CASE',
-            btn_download: 'DOWNLOAD',
+            btn_inverse: 'INVERSE',
             
+            // List/Cleaner Tools
             btn_to_commas: 'LINES → COMMAS', 
             btn_to_lines: 'COMMAS → LINES',
             btn_fix_spaces: 'FIX SPACES', 
             btn_rem_lines: 'REMOVE EMPTY LINES',
-            btn_add_para: 'ADD PARAGRAPH', 
-            btn_add_sent: 'ADD SENTENCE',
-            btn_strip: 'CLEAR HTML/STYLE',
-            
-            // Lorem Ipsum
-            lbl_count: 'Count',
-            opt_paras: 'Paragraphs',
-            opt_words: 'Words',
-            opt_bytes: 'Bytes',
-            opt_lists: 'Lists',
-            btn_generate: 'GENERATE',
-            
+            btn_strip: 'CLEAR HTML',
+
             // PortaVisa
             pv_calc_title: 'Schengen Calculator',
-            pv_calc_desc: 'Calculate your remaining days.'
+            pv_calc_desc: 'Calculate remaining days.'
         },
         tr: {
-
-        tag_ALL: 'Tümü', tag_FAVS: 'Fav', tag_TEXT: 'Metin', tag_FORMAT: 'Format', tag_GENERATE: 'Üret', tag_PRODUCT: 'Visa',
-
-            // FİLTRELER
+            // Filtreler
             tag_ALL: 'TÜMÜ', 
-            tag_FAVS: 'FAVORİLERİM', 
+            tag_FAVS: 'FAV', 
             tag_TEXT: 'METİN', 
             tag_FORMAT: 'FORMAT', 
             tag_GENERATE: 'ÜRET', 
-            tag_PRODUCT: 'ÜRÜN',
+            tag_PRODUCT: 'VİZE',
 
-            // GENEL UI
+            // Girdi/Çıktı
             input_label: 'ÇALIŞMA ALANI',
-            input_placeholder: 'Buraya Yaz veya yapıştır',
+            input_placeholder: 'Buraya yazın veya yapıştırın...',
             result_label: 'SONUÇLAR',
+            
+            // İşlemler
             btn_clear: 'TEMİZLE',
             btn_copy: 'KOPYALA',
             msg_copied: 'KOPYALANDI!',
-            
-            // Tool Etiketleri
-            lbl_chars: 'KARAKTER', 
-            lbl_words: 'KELİME', 
-            lbl_sentences: 'CÜMLE', 
-            lbl_paragraphs: 'PARAGRAF',
-            
-            // İşlem Butonları
+            btn_download: 'İNDİR',
             btn_process: 'İŞLE',
+
+            // Metin Araçları
             btn_upper: 'BÜYÜK HARF', 
             btn_lower: 'KÜÇÜK HARF', 
             btn_sentence: 'CÜMLE DÜZENİ',
-            btn_capital: 'BAŞ HARFLER BÜYÜK',
-            btn_alternating: 'deĞiŞkEn hArF',
-            btn_title: 'BAŞLIK DÜZENİ',
-            btn_inverse: 'tERSİNE çEVİR',
-            btn_download: 'İNDİR',
+            btn_capital: 'BAŞ HARFLER',
+            btn_alternating: 'DeĞiŞkEn',
+            btn_title: 'BAŞLIK',
+            btn_inverse: 'TERSİNE',
             
-            btn_to_commas: 'SATIRLAR → VİRGÜLLER', 
-            btn_to_lines: 'VİRGÜLLER → SATIRLAR',
-            btn_fix_spaces: 'BOŞLUKLARI DÜZELT', 
-            btn_rem_lines: 'BOŞ SATIRLARI KALDIR',
-            btn_add_para: 'PARAGRAF EKLE', 
-            btn_add_sent: 'CÜMLE EKLE',
-            btn_strip: 'HTML/STIL TEMİZLE',
-            
-            // Lorem Ipsum
-            lbl_count: 'Miktar',
-            opt_paras: 'Paragraf',
-            opt_words: 'Kelime',
-            opt_bytes: 'Bayt',
-            opt_lists: 'Liste',
-            btn_generate: 'OLUŞTUR',
-            
+            // Liste Araçları
+            btn_to_commas: 'SATIR → VİRGÜL', 
+            btn_to_lines: 'VİRGÜL → SATIR',
+            btn_fix_spaces: 'BOŞLUK DÜZELT', 
+            btn_rem_lines: 'BOŞ SATIR SİL',
+            btn_strip: 'HTML TEMİZLE',
+
             // PortaVisa
             pv_calc_title: 'Schengen Hesaplayıcı',
-            pv_calc_desc: 'Kalan günlerinizi hesaplayın.'
+            pv_calc_desc: 'Kalan gün hesabı.'
         },
         pt: {
-
-        input_placeholder: 'Escreva ou cole aqui',
-        tag_ALL: 'Todos', tag_FAVS: 'Favs', tag_TEXT: 'Texto', tag_FORMAT: 'Formato', tag_GENERATE: 'Gerar', tag_PRODUCT: 'Visa',
-        
-            // FİLTRELER
+            // Filtros
             tag_ALL: 'TODOS', 
-            tag_FAVS: 'MEUS FAVORITOS', 
+            tag_FAVS: 'FAVS', 
             tag_TEXT: 'TEXTO', 
             tag_FORMAT: 'FORMATO', 
             tag_GENERATE: 'GERAR', 
-            tag_PRODUCT: 'PRODUTO',
+            tag_PRODUCT: 'VISTO',
 
-            // GENEL UI
+            // Input
             input_label: 'ÁREA DE TRABALHO',
+            input_placeholder: 'Escreva ou cole aqui...',
             result_label: 'RESULTADOS',
+            
+            // Ações
             btn_clear: 'LIMPAR',
             btn_copy: 'COPIAR',
             msg_copied: 'COPIADO!',
-            
-            // Tool Etiketleri
-            lbl_chars: 'CARACTERES', 
-            lbl_words: 'PALAVRAS', 
-            lbl_sentences: 'FRASES', 
-            lbl_paragraphs: 'PARÁGRAFOS',
-            
-            // İşlem Butonları
+            btn_download: 'BAIXAR',
             btn_process: 'PROCESSAR',
+
+            // Texto
             btn_upper: 'MAIÚSCULAS', 
             btn_lower: 'MINÚSCULAS', 
             btn_sentence: 'FRASE',
@@ -225,72 +195,78 @@ const TRANSLATIONS = {
             btn_alternating: 'ALTERNADO',
             btn_title: 'TÍTULO',
             btn_inverse: 'INVERSO',
-            btn_download: 'BAIXAR',
             
+            // Lista
             btn_to_commas: 'LINHAS → VÍRGULAS', 
             btn_to_lines: 'VÍRGULAS → LINHAS',
             btn_fix_spaces: 'CORRIGIR ESPAÇOS', 
-            btn_rem_lines: 'REMOVER LINHAS VAZIAS',
-            btn_add_para: 'ADICIONAR PARÁGRAFO', 
-            btn_add_sent: 'ADICIONAR FRASE',
-            btn_strip: 'REMOVER HTML/FORMATAÇÃO',
-            
-            // Lorem Ipsum
-            lbl_count: 'Quantidade',
-            opt_paras: 'Parágrafos',
-            opt_words: 'Palavras',
-            opt_bytes: 'Bytes',
-            opt_lists: 'Listas',
-            btn_generate: 'GERAR',
-            
+            btn_rem_lines: 'REMOVER LINHAS',
+            btn_strip: 'LIMPAR HTML',
+
             // PortaVisa
             pv_calc_title: 'Calculadora Schengen',
-            pv_calc_desc: 'Calcule seus dias restantes.'
+            pv_calc_desc: 'Calcular dias restantes.'
         }
     },
 
     // ============================================
-    // 3. ARAÇ İSİMLERİ & AÇIKLAMALARI (TÜM ARAÇLAR)
+    // 3. TOOLS METADATA (Card Titles & Descs)
     // ============================================
     tools: {
         en: {
-            char_title: 'Character Counter', char_desc: 'Calculates characters, words, lines and density.',
-            case_title: 'Case Converter', case_desc: 'Changes text to uppercase or lowercase instantly.',
-            line_title: 'List Fixer', line_desc: 'Converts lines to commas, and commas to lines.',
-            clean_title: 'Text Cleaner', clean_desc: 'Removes empty lines and extra spaces from text.',
-            lorem_title: 'Lorem Ipsum', lorem_desc: 'Generates dummy text for designs and projects.',
-            style_title: 'Style Remover', style_desc: 'Clears bold, italic and other styles from text.',
-            portavisa_title: 'Porta Visa', portavisa_desc: 'Complete migration and visa guide for Portugal.'
+            char_title: 'Character Counter', char_desc: 'Count characters, words, sentences, and paragraphs in real-time.',
+            case_title: 'Case Converter', case_desc: 'Changes text to uppercase, lowercase, or sentence case instantly.',
+            line_title: 'List Fixer', line_desc: 'Remove line breaks, add commas, or sort lists alphabetically.',
+            clean_title: 'Text Cleaner', clean_desc: 'Remove extra spaces, strip HTML, and clean up messy text.',
+            lorem_title: 'Lorem Ipsum', lorem_desc: 'Generate placeholder text for your designs.',
+            style_title: 'Style Remover', style_desc: 'Remove formatting from text for a clean paste.',
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Schengen calculator and visa tracking assistant.'
         },
         tr: {
-            char_title: 'Karakter Sayıcı', char_desc: 'Metindeki harf, kelime ve satırları anında sayar.',
-            case_title: 'Büyük/Küçük Harf', case_desc: 'Metni büyük veya küçük harfe hızlıca çevirir.',
-            line_title: 'Liste Düzenleyici', line_desc: 'Satırları virgüle, virgülleri satıra dönüştürür.',
-            clean_title: 'Metin Temizleyici', clean_desc: 'Gereksiz boş satırları ve fazla boşlukları siler.',
-            lorem_title: 'Lorem Ipsum', lorem_desc: 'Tasarımlarınız için anlamsız dolgu metni üretir.',
-            style_title: 'Stil Temizleyici', style_desc: 'Yazıdaki kalın, italik gibi biçimlendirmeleri kaldırır.',
-            portavisa_title: 'Porta Visa', portavisa_desc: 'Portekiz için kapsamlı vize ve göçmenlik rehberi.'
+            char_title: 'Karakter Sayıcı', char_desc: 'Karakterleri, kelimeleri, cümleleri ve paragrafları anlık sayın.',
+            case_title: 'Büyük/Küçük Harf', case_desc: 'Metni anında büyük, küçük veya cümle düzenine çevirin.',
+            line_title: 'Liste Düzenleyici', line_desc: 'Satır sonlarını kaldırın, virgül ekleyin veya listeleri sıralayın.',
+            clean_title: 'Metin Temizleyici', clean_desc: 'Fazla boşlukları, HTML kodlarını ve gereksiz karakterleri temizleyin.',
+            lorem_title: 'Lorem Ipsum', lorem_desc: 'Tasarımlarınız için dolgu metni oluşturun.',
+            style_title: 'Biçim Temizleyici', style_desc: 'Metin biçimlendirmelerini kaldırarak temiz yapıştırma sağlayın.',
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Schengen hesaplayıcı ve vize takip asistanı.'
         },
         pt: {
-            char_title: 'Contador de Caracteres', char_desc: 'Conta letras, palavras e linhas instantaneamente.',
-            case_title: 'Conversor de Caso', case_desc: 'Altera o texto para maiúsculas ou minúsculas.',
-            line_title: 'Corretor de Lista', line_desc: 'Converte linhas em vírgulas e vírgulas em linhas.',
-            clean_title: 'Limpador de Texto', clean_desc: 'Remove linhas vazias e espaços extras do texto.',
-            lorem_title: 'Lorem Ipsum', lorem_desc: 'Gera texto fictício para designs e projetos.',
-            style_title: 'Removedor de Estilo', style_desc: 'Limpa negrito, itálico e outros estilos do texto.',
-            portavisa_title: 'Porta Visa', portavisa_desc: 'Guia completo de migração e vistos para Portugal.'
+            char_title: 'Contador de Caracteres', char_desc: 'Conte caracteres, palavras, frases e parágrafos em tempo real.',
+            case_title: 'Conversor de Maiúsculas', case_desc: 'Mude o texto para maiúsculas, minúsculas ou sentença instantaneamente.',
+            line_title: 'Fixador de Lista', line_desc: 'Remova quebras de linha, adicione vírgulas ou ordene listas.',
+            clean_title: 'Limpador de Texto', clean_desc: 'Remova espaços extras, HTML e limpe textos bagunçados.',
+            lorem_title: 'Lorem Ipsum', lorem_desc: 'Gere texto de preenchimento para seus designs.',
+            style_title: 'Removedor de Estilo', style_desc: 'Remova a formatação do texto para uma colagem limpa.',
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Calculadora Schengen e assistente de rastreamento de vistos.'
         }
     }
 };
 
+/**
+ * Helper: t(section, key, lang)
+ * Güvenli çeviri fonksiyonu. Hata durumunda key'in kendisini döndürür.
+ */
 function t(section, key, lang) {
+    // 1. Dil belirle (Parametre > URL > LocalStorage > Default)
     if (!lang) {
         const urlParams = new URLSearchParams(window.location.search);
         lang = urlParams.get('lang') || localStorage.getItem('userLang') || 'en';
     }
+
     try {
-        if (TRANSLATIONS[section] && TRANSLATIONS[section][lang] && TRANSLATIONS[section][lang][key]) return TRANSLATIONS[section][lang][key];
-        if (TRANSLATIONS[section] && TRANSLATIONS[section]['en'] && TRANSLATIONS[section]['en'][key]) return TRANSLATIONS[section]['en'][key];
+        // 2. Çeviriyi bul
+        if (TRANSLATIONS[section]?.[lang]?.[key]) {
+            return TRANSLATIONS[section][lang][key];
+        }
+        // 3. Bulamazsan İngilizce'ye düş (Fallback)
+        if (TRANSLATIONS[section]?.['en']?.[key]) {
+            return TRANSLATIONS[section]['en'][key];
+        }
+        // 4. Hiçbiri yoksa key'i döndür
         return key; 
-    } catch (e) { return key; }
+    } catch (e) {
+        console.warn(`Translation Error: ${section}.${key}`);
+        return key; 
+    }
 }

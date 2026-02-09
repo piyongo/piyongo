@@ -3,152 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>Piyongo - The Digital Workbench</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Courier+New&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <title>Piyongo - Professional Micro-Tools</title>
+    <meta name="description" content="Free, fast, and privacy-focused online tools. Case converter, character counter, list fixer and more. No ads, no tracking.">
+    <meta name="google-site-verification" content="" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        window.PAGE_CONFIG = { id: 'index', type: 'marketing', name: 'Home' };
-        window.toolsData = [
-            { id: 'character-counter', link: 'tools/character-counter.html', titleKey: 'tools.char_title', descKey: 'tools.char_desc', tag: 'TEXT' },
-            { id: 'case-converter', link: 'tools/case-converter.html', titleKey: 'tools.case_title', descKey: 'tools.case_desc', tag: 'TEXT' },
-            { id: 'list-fixer', link: 'tools/list-fixer.html', titleKey: 'tools.line_title', descKey: 'tools.line_desc', tag: 'FORMAT' },
-            { id: 'text-cleaner', link: 'tools/line-cleaner.html', titleKey: 'tools.clean_title', descKey: 'tools.clean_desc', tag: 'TEXT' },
-            { id: 'lorem-ipsum', link: 'tools/lorem-ipsum.html', titleKey: 'tools.lorem_title', descKey: 'tools.lorem_desc', tag: 'GENERATE' },
-            { id: 'style-remover', link: 'tools/style-remover.html', titleKey: 'tools.style_title', descKey: 'tools.style_desc', tag: 'TEXT' },
-            { id: 'portavisa', link: 'products/portavisa.html', titleKey: 'tools.portavisa_title', descKey: 'tools.portavisa_desc', tag: 'PRODUCT', featured: true }
-        ];
+    <link rel="stylesheet" href="assets/design-system.css"> <script>
+        // Sadece Kimlik Kartı
+        window.PAGE_CONFIG = { id: 'index', type: 'home', name: 'Home' };
     </script>
 </head>
-<body class="min-h-screen bg-[#f5f5f5] text-black font-sans flex flex-col">
+<body class="bg-[#f5f5f5] text-black font-sans flex flex-col min-h-screen selection:bg-[#FF4F00] selection:text-white">
 
-    <script src="js/config.js"></script>
-    <script src="js/translations.js"></script>
-    <script src="js/components.js"></script>
+    <script src="js/config.js"></script>       <script src="js/translations.js"></script> <script src="js/components.js"></script>   <div id="header-mount"></div>
 
-    <main class="flex-grow max-w-6xl mx-auto px-6 w-full pb-16">
-        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-10 pt-2">
-            <div class="max-w-full md:max-w-xl">
-                <p class="text-base md:text-xl text-neutral-500 font-mono leading-relaxed" data-i18n="common.footer_desc">
-                    Detailed guides, calculators, smart tools. All in one place. Completely free.
-                </p>
+    <main class="flex-grow max-w-6xl mx-auto px-6 w-full pb-24 md:pb-32">
+        
+        <div class="mb-12 md:mb-16">
+            <div class="relative group max-w-2xl">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-neutral-400 group-focus-within:text-[#FF4F00] transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+                <input type="text" id="searchInput" 
+                    class="block w-full pl-12 pr-4 py-4 bg-white border-2 border-transparent rounded-2xl text-lg font-bold placeholder:text-neutral-300 placeholder:font-bold focus:outline-none focus:border-[#FF4F00] transition-all"
+                    data-i18n-placeholder="common.search_placeholder"
+                    placeholder="Search">
             </div>
-            <div id="coffee-btn-placeholder" class="hidden md:block"></div>
+
+            <div class="hidden md:flex flex-wrap gap-2 mt-6" id="filterContainer">
+                <button onclick="AppUI.filterTools('ALL')" class="filter-btn active px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-black bg-black text-white transition-all" data-i18n="ui.tag_ALL">ALL</button>
+                <button onclick="AppUI.filterTools('FAVS')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black transition-all" data-i18n="ui.tag_FAVS">FAVS</button>
+                <button onclick="AppUI.filterTools('TEXT')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black transition-all" data-i18n="ui.tag_TEXT">TEXT</button>
+                <button onclick="AppUI.filterTools('FORMAT')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black transition-all" data-i18n="ui.tag_FORMAT">FORMAT</button>
+                <button onclick="AppUI.filterTools('GENERATE')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black transition-all" data-i18n="ui.tag_GENERATE">GEN</button>
+                <button onclick="AppUI.filterTools('PRODUCT')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black transition-all" data-i18n="ui.tag_PRODUCT">VISA</button>
+            </div>
         </div>
 
-<div class="mb-10 relative w-full md:max-w-xl group">
-    <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-        <svg class="w-5 h-5 text-neutral-400 group-focus-within:text-[#FF4F00]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    </div>
-    <input type="text" id="searchInput" 
-        data-i18n-placeholder="common.search_placeholder"
-        class="block w-full h-12 md:h-14 pl-12 pr-4 bg-white border-2 border-black rounded-[20px] md:rounded-[24px] text-base md:text-xl font-mono focus:outline-none focus:border-[#FF4F00]"
-        placeholder="Search tools...">
-</div>
+        <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr"></div>
 
-<div class="hidden md:flex flex-wrap gap-2 mb-10" id="filterContainer">
-    <button onclick="filterTools('ALL')" class="filter-btn active px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2 border-black bg-black text-white" data-i18n="ui.tag_ALL">All</button>
-    
-    <button onclick="filterTools('FAVS')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black" data-i18n="ui.tag_FAVS">Favs</button>
-    <button onclick="filterTools('TEXT')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black" data-i18n="ui.tag_TEXT">Text</button>
-    <button onclick="filterTools('FORMAT')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black" data-i18n="ui.tag_FORMAT">Format</button>
-    <button onclick="filterTools('GENERATE')" class="filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2 border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black" data-i18n="ui.tag_GENERATE">Generate</button>
-</div>
-
-<div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr"></div>        <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 auto-rows-fr"></div>
-        <div id="noResults" class="hidden text-center py-12 md:py-24"><p class="font-mono text-lg text-neutral-400">NO TOOLS FOUND</p></div>
-
-        <div class="mb-10 relative w-full md:max-w-xl group">
-</div>
+        <div id="noResults" class="hidden text-center py-20">
+            <div class="text-6xl mb-4">👀</div>
+            <h3 class="text-xl font-black mb-2" data-i18n="common.no_results">NO DATA FOUND</h3>
+            <p class="text-neutral-400 font-mono text-sm">Try searching for something else.</p>
+        </div>
 
     </main>
 
-/* Replace the script section in index.html */
-<script>
-    const grid = document.getElementById('toolsGrid');
-    const searchInput = document.getElementById('searchInput');
-    let currentFilter = 'ALL';
-
-    function getFavorites() { try { return JSON.parse(localStorage.getItem('piyongo_favs') || '[]'); } catch (e) { return []; } }
-    
-    // NEW LOGIC: First letter of First Word + First letter of Last Word
-    function getInitials(title) {
-        // Remove slashes/punctuation, split by space, remove empty strings
-        const words = title.replace(/[/]/g, ' ').split(' ').filter(w => w.trim().length > 0);
-        
-        if (words.length >= 2) {
-            const first = words[0][0];
-            const last = words[words.length - 1][0];
-            return (first + last).toUpperCase();
-        }
-        // Fallback for single word titles
-        if (words.length === 1) return words[0].substring(0, 2).toUpperCase();
-        return "TL";
-    }
-
-    function filterTools(category) {
-        currentFilter = category;
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            const btnKey = btn.getAttribute('data-i18n').split('_').pop(); 
-            const baseClasses = "filter-btn px-4 py-1.5 rounded-full font-bold font-mono text-xs uppercase tracking-wider transition-all border-2";
-            if (btnKey === category) {
-                btn.className = `${baseClasses} active border-black bg-black text-white`;
-            } else {
-                btn.className = `${baseClasses} border-neutral-200 bg-white text-neutral-500 hover:border-black hover:text-black`;
-            }
-        });
-        renderTools(searchInput.value);
-    }
-
-    function renderTools(searchText = '') {
-        grid.innerHTML = '';
-        const favorites = getFavorites();
-        const currentLang = localStorage.getItem('userLang') || 'en';
-
-        window.toolsData.forEach(tool => {
-            const title = (typeof t === 'function') ? t('tools', tool.titleKey.split('.')[1], currentLang) : 'Tool';
-            const desc = (typeof t === 'function') ? t('tools', tool.descKey.split('.')[1], currentLang) : '';
-            
-            const matchesSearch = title.toLowerCase().includes(searchText.toLowerCase()) || desc.toLowerCase().includes(searchText.toLowerCase());
-            const matchesCategory = currentFilter === 'ALL' || tool.tag === currentFilter || (currentFilter === 'FAVS' && favorites.includes(tool.id));
-
-            if(matchesSearch && matchesCategory) {
-                const card = document.createElement('a');
-                card.href = tool.link;
-                const isFeatured = tool.featured;
-                const generatedIcon = tool.id === 'portavisa' ? 'PV' : getInitials(title);
-                
-                // Optimized Padding (p-6) and Border Radius
-                card.className = `tool-card group relative flex flex-col justify-between p-6 border-2 border-black rounded-[32px] overflow-hidden bg-white ${isFeatured ? 'md:col-span-2' : ''}`;
-                card.innerHTML = `
-                    <div class="flex justify-between items-start mb-6">
-                        <div>
-                            <h3 class="text-xl md:text-2xl font-bold mb-2 transition-colors tracking-tight">${title}</h3>
-                            <p class="text-xs md:text-sm text-neutral-500 font-mono line-clamp-2 leading-relaxed">${desc}</p>
-                        </div>
-                        <div class="pt-1 text-neutral-300 group-hover:text-black transition-colors">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                        </div>
-                    </div>
-                    <div class="flex justify-between items-end">
-                        <span class="px-3 py-1 bg-neutral-100 rounded-lg text-[10px] font-bold text-neutral-500 uppercase tracking-widest">${tool.tag}</span>
-                        <div class="card-icon-box w-12 h-12 rounded-full bg-neutral-100 flex items-center justify-center font-bold font-mono transition-all group-hover:bg-[#FF4F00] group-hover:text-white">${generatedIcon}</div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            }
-        });
-        const noRes = document.getElementById('noResults');
-        if (grid.children.length === 0) noRes.classList.remove('hidden');
-        else noRes.classList.add('hidden');
-    }
-
-    document.addEventListener('DOMContentLoaded', () => { 
-        renderTools(); 
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('filter')) filterTools(urlParams.get('filter'));
-    });
-
-    searchInput.addEventListener('input', (e) => renderTools(e.target.value));
-</script>
 </body>
 </html>
