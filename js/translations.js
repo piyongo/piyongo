@@ -1,3 +1,5 @@
+/* js/translations.js - V17.0 (Full & Complete) */
+
 const TRANSLATIONS = {
     // ============================================
     // 1. GENEL METİNLER (Header, Footer, Meta)
@@ -11,11 +13,19 @@ const TRANSLATIONS = {
             contact: 'Contact',
             buyMeACoffee: 'Buy Me A Coffee',
             footer_desc: 'Detailed guides, calculators, smart tools. All in one place. Completely free, an open resource for everyone.',
-            search_placeholder: 'Search (case converter, portugal visa..)', 
+            
+            // UX DECISION: Shortened for Mobile Fit
+            search_placeholder: 'Search', 
+            
             no_results: 'NO DATA FOUND',
             lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
             footer_about: 'About', 
-            footer_contact: 'Contact'
+            footer_contact: 'Contact',
+            
+            // Drawer Keys
+            drawer_recent: "Recently Used",
+            drawer_favs: "Favourites",
+            drawer_cats: "Categories"
         },
         tr: {
             index: 'ANASAYFA',
@@ -25,7 +35,15 @@ const TRANSLATIONS = {
             contact: 'İletişim',
             buyMeACoffee: 'Kahve Ismarla',
             footer_desc: 'Kapsamlı rehberler, hesaplayıcılar ve akıllı araçlar. Hepsi bir arada. Tamamen ücretsiz, herkese açık bir kaynak.',
-            search_placeholder: 'Arama (karakter hesaplama, portekiz vize..)',
+            
+// Drawer Keys
+            drawer_recent: "Son Kullanılanlar",
+            drawer_favs: "Favorilerim",
+            drawer_cats: "Kategoriler",
+
+            // UX DECISION: Shortened for Mobile Fit
+            search_placeholder: 'Ara',
+            
             no_results: 'SONUÇ BULUNAMADI',
             lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
             footer_about: 'Hakkımda', 
@@ -39,7 +57,13 @@ const TRANSLATIONS = {
             contact: 'Contato',
             buyMeACoffee: 'Pague Um Bica',
             footer_desc: 'Guias detalhados e ferramentas inteligentes. Tudo num só lugar. Totalmente gratuito, um recurso aberto para todos.',
-            search_placeholder: 'Pesquisa (calcular caracteres, visto..)',
+            
+// Drawer Keys
+            drawer_recent: "Recentes",
+            drawer_favs: "Favoritos",
+            drawer_cats: "Categorias",
+            // UX DECISION: Shortened for Mobile Fit
+            search_placeholder: 'Pesquisar',
             no_results: 'NENHUM DADO ENCONTRADO',
             lang_en: 'English', lang_tr: 'Türkçe', lang_pt: 'Português',
             footer_about: 'SOBRE', 
@@ -52,6 +76,10 @@ const TRANSLATIONS = {
     // ============================================
     ui: {
         en: {
+            
+        // Filter labels
+        tag_ALL: 'All', tag_FAVS: 'Favs', tag_TEXT: 'Text', tag_FORMAT: 'Format', tag_GENERATE: 'Gen', tag_PRODUCT: 'Visa',
+
             // FİLTRELER
             tag_ALL: 'ALL', 
             tag_FAVS: 'MY FAVS', 
@@ -62,12 +90,11 @@ const TRANSLATIONS = {
 
             // GENEL UI
             input_label: 'WORKSPACE',
-            input_placeholder: 'Type or paste content here...',
+            input_placeholder: 'Type or paste here',
             result_label: 'RESULTS',
             btn_clear: 'CLEAR',
-            btn_copy: 'COPY RESULT',
+            btn_copy: 'COPY',
             msg_copied: 'COPIED!',
-            req_link: 'Need a specific tool?',
             
             // Tool Etiketleri
             lbl_chars: 'CHARACTERS', 
@@ -107,6 +134,9 @@ const TRANSLATIONS = {
             pv_calc_desc: 'Calculate your remaining days.'
         },
         tr: {
+
+        tag_ALL: 'Tümü', tag_FAVS: 'Fav', tag_TEXT: 'Metin', tag_FORMAT: 'Format', tag_GENERATE: 'Üret', tag_PRODUCT: 'Visa',
+
             // FİLTRELER
             tag_ALL: 'TÜMÜ', 
             tag_FAVS: 'FAVORİLERİM', 
@@ -117,12 +147,11 @@ const TRANSLATIONS = {
 
             // GENEL UI
             input_label: 'ÇALIŞMA ALANI',
-            input_placeholder: 'İçeriği buraya yazın veya yapıştırın...',
+            input_placeholder: 'Buraya Yaz veya yapıştır',
             result_label: 'SONUÇLAR',
             btn_clear: 'TEMİZLE',
             btn_copy: 'KOPYALA',
             msg_copied: 'KOPYALANDI!',
-            req_link: 'Özel bir araca mı ihtiyacın var?',
             
             // Tool Etiketleri
             lbl_chars: 'KARAKTER', 
@@ -162,6 +191,10 @@ const TRANSLATIONS = {
             pv_calc_desc: 'Kalan günlerinizi hesaplayın.'
         },
         pt: {
+
+        input_placeholder: 'Escreva ou cole aqui',
+        tag_ALL: 'Todos', tag_FAVS: 'Favs', tag_TEXT: 'Texto', tag_FORMAT: 'Formato', tag_GENERATE: 'Gerar', tag_PRODUCT: 'Visa',
+        
             // FİLTRELER
             tag_ALL: 'TODOS', 
             tag_FAVS: 'MEUS FAVORITOS', 
@@ -172,12 +205,10 @@ const TRANSLATIONS = {
 
             // GENEL UI
             input_label: 'ÁREA DE TRABALHO',
-            input_placeholder: 'Digite ou cole o conteúdo aqui...',
             result_label: 'RESULTADOS',
             btn_clear: 'LIMPAR',
             btn_copy: 'COPIAR',
             msg_copied: 'COPIADO!',
-            req_link: 'Precisa de uma ferramenta específica?',
             
             // Tool Etiketleri
             lbl_chars: 'CARACTERES', 
@@ -229,16 +260,16 @@ const TRANSLATIONS = {
             clean_title: 'Text Cleaner', clean_desc: 'Removes empty lines and extra spaces from text.',
             lorem_title: 'Lorem Ipsum', lorem_desc: 'Generates dummy text for designs and projects.',
             style_title: 'Style Remover', style_desc: 'Clears bold, italic and other styles from text.',
-            portavisa_title: 'PortaVisa Core', portavisa_desc: 'Complete migration and visa guide for Portugal.'
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Complete migration and visa guide for Portugal.'
         },
         tr: {
-            char_title: 'Karakter Sayacı', char_desc: 'Metindeki harf, kelime ve satırları anında sayar.',
+            char_title: 'Karakter Sayıcı', char_desc: 'Metindeki harf, kelime ve satırları anında sayar.',
             case_title: 'Büyük/Küçük Harf', case_desc: 'Metni büyük veya küçük harfe hızlıca çevirir.',
             line_title: 'Liste Düzenleyici', line_desc: 'Satırları virgüle, virgülleri satıra dönüştürür.',
             clean_title: 'Metin Temizleyici', clean_desc: 'Gereksiz boş satırları ve fazla boşlukları siler.',
             lorem_title: 'Lorem Ipsum', lorem_desc: 'Tasarımlarınız için anlamsız dolgu metni üretir.',
             style_title: 'Stil Temizleyici', style_desc: 'Yazıdaki kalın, italik gibi biçimlendirmeleri kaldırır.',
-            portavisa_title: 'PortaVisa Core', portavisa_desc: 'Portekiz için kapsamlı vize ve göçmenlik rehberi.'
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Portekiz için kapsamlı vize ve göçmenlik rehberi.'
         },
         pt: {
             char_title: 'Contador de Caracteres', char_desc: 'Conta letras, palavras e linhas instantaneamente.',
@@ -247,7 +278,7 @@ const TRANSLATIONS = {
             clean_title: 'Limpador de Texto', clean_desc: 'Remove linhas vazias e espaços extras do texto.',
             lorem_title: 'Lorem Ipsum', lorem_desc: 'Gera texto fictício para designs e projetos.',
             style_title: 'Removedor de Estilo', style_desc: 'Limpa negrito, itálico e outros estilos do texto.',
-            portavisa_title: 'PortaVisa Core', portavisa_desc: 'Guia completo de migração e vistos para Portugal.'
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Guia completo de migração e vistos para Portugal.'
         }
     }
 };
