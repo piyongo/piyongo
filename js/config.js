@@ -23,6 +23,7 @@
             descKey: 'tools.char_desc', 
             tag: 'TEXT',
             featured: false 
+            
         },
         { 
             id: 'case-converter', 
@@ -41,12 +42,12 @@
             featured: false 
         },
         { 
-            id: 'text-cleaner', 
+            id: 'line-cleaner', 
             link: 'tools/line-cleaner.html', 
             titleKey: 'tools.clean_title', 
             descKey: 'tools.clean_desc', 
             tag: 'FORMAT',
-            featured: false 
+            featured: false
         },
         { 
             id: 'lorem-ipsum', 
