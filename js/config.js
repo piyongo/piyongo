@@ -175,3 +175,31 @@
     System.boot();
 
 })(window);
+
+/* js/config.js EN ALTINA EKLE */
+
+// --- RECENTLY VIEWED TRACKER ---
+if (typeof window !== 'undefined' && window.localStorage && window.PAGE_CONFIG) {
+    try {
+        const MAX_RECENTS = 5;
+        let recents = JSON.parse(localStorage.getItem('recent_tools')) || [];
+        
+        // Şu anki sayfayı objeye çevir
+        const currentTool = {
+            id: window.PAGE_CONFIG.id,
+            name: window.PAGE_CONFIG.name, // config.js'deki name kullanılacak
+            link: window.location.pathname.split('/').pop() // dosya adı
+        };
+
+        // Varsa eskini sil (öne taşımak için)
+        recents = recents.filter(item => item.id !== currentTool.id);
+        
+        // Başa ekle
+        recents.unshift(currentTool);
+        
+        // Limiti koru
+        if (recents.length > MAX_RECENTS) recents.pop();
+        
+        localStorage.setItem('recent_tools', JSON.stringify(recents));
+    } catch (e) { console.log('Tracker error', e); }
+}

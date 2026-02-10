@@ -49,7 +49,7 @@ const TRANSLATIONS = {
             footer_social: 'Bağlantı',
 
             // FOOTER LINKS
-            footer_about: 'Hakkında',
+            footer_about: 'Hakkımda',
             footer_contact: 'İletişim',
             footer_privacy: 'Gizlilik',
             footer_terms: 'Koşullar',
