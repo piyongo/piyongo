@@ -139,6 +139,9 @@ const TRANSLATIONS = {
             source: "SOURCE",
             date: "DATE",
             no_results: "No matching guides found",
+            // ... diğer anahtarlar
+            system_status: " ",
+            disclaimer_text: "Refined by AI-Scraping & Verification. Verify critical facts with official sources.",
 
             // İSTATİSTİK LABEL'LARI (HEPSİ BÜYÜK HARF)
             stat_chars: 'CHARS',
@@ -194,6 +197,9 @@ const TRANSLATIONS = {
             ource: "KAYNAK",
             date: "TARİH",
             no_results: "Eşleşen rehber bulunamadı",
+            // ... diğer anahtarlar
+            system_status: " ",
+            disclaimer_text: "AI-Scraping ve Yapay Zeka teyidiyle hazırlanmıştır. Kritik bilgileri resmi makamlardan teyit edin.",
 
             // Girdi/Çıktı
             input_label: 'ÇALIŞMA ALANI',
@@ -249,6 +255,9 @@ const TRANSLATIONS = {
             source: "FONTE",
             date: "DATA",
             no_results: "Nenhum guia encontrado",
+            // ... diğer anahtarlar
+            system_status: "ESTADO DO SISTEMA:",
+            disclaimer_text: "Refinado por IA-Scraping e Verificação. Confirme dados críticos com fontes oficiais.",
 
             // Input
             input_label: 'ÁREA DE TRABALHO',
@@ -346,7 +355,7 @@ const TRANSLATIONS = {
                     <div class="bg-black text-white rounded-[40px] p-8 md:p-14 mt-12 relative overflow-hidden border border-neutral-800">
                         <div class="relative z-10 max-w-3xl">
                             <div class="font-sans text-base md:text-lg space-y-6 text-neutral-300 leading-relaxed tracking-wide">
-                                <p>My name is <strong>Yusuf Kaya</strong>. I am a Senior Digital Designer. After 11 years at my company, I lost my job in a single day. At 42, I decided to pack my life into two suitcases and move to Lisbon to start over.</p>
+                                <p>My name is <strong>Yusuf</strong>. I decided to pack my life into two suitcases and move to Lisbon to start over.</p>
                                 
                                 <p>I didn't start this project alone. I had the support of my closest companion of 15 years. He was the one who believed in me while I worked through the nights to build this. However, in the middle of this journey, I lost him. It was a very deep pain, but I didn't stop.</p>
                                 
@@ -357,10 +366,7 @@ const TRANSLATIONS = {
                                 </p>
                                 <p class="text-white font-medium opacity-80 pt-2">Thank you for being part of this journey.</p>
                             </div>
-                            <div class="mt-12 flex flex-col md:flex-row gap-4">
-                                <a href="https://ko-fi.com/piyongo" class="inline-block bg-[#FF4F00] text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">Buy a coffee —></a>
-                                <a href="contact.html" class="inline-block border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">Get in touch</a>
-                            </div>
+                    
                         </div>
                     </div>`
                 },
@@ -371,9 +377,9 @@ const TRANSLATIONS = {
                     <div class="bg-black text-white rounded-[40px] p-8 md:p-14 mt-12 relative overflow-hidden border border-neutral-800">
                         <div class="relative z-10 max-w-3xl">
                             <div class="font-sans text-base md:text-lg space-y-6 text-neutral-300 leading-relaxed tracking-wide">
-                                <p>Benim adım <strong>Yusuf</strong>. Multidisipliner tasarımcıyım. 11 yıllık işimi kaybettikten sonra hayatımı iki bavula sığdırarak yeni bir sayfa açmak için Lizbon'a taşındım ve bu proje üzerine çalışmaya başladım.</p>
+                                <p>Benim adım <strong>Yusuf</strong>. Hayatımı iki bavula sığdırarak yeni bir sayfa açmak için Lizbon'a taşındım ve bu proje üzerine çalışmaya başladım.</p>
                                 
-                                <p>Bu yolculukta tek başıma sayılmazdım. 15 yıllık yol arkadaşımın desteği hem taşınırken hem Piyongo üzerine çalışırken hep yanımdaydı. Sabahlara kadar çalıştığım her an desteğini hiç esirgemedi. Ne yazık ki, bu sürecin tam ortasında onu kaybettim. Acım çok derindi ama pes etmedim.</p>
+                                <p>Bu yolculukta tek başıma sayılmazdım. 15 yıllık can dostumun desteği hem taşınırken hem Piyongo üzerine çalışırken hep yanımdaydı. Sabahlara kadar çalıştığım her an desteğini hiç esirgemedi. Ne yazık ki, bu sürecin tam ortasında onu kaybettim. Acım çok derindi ama pes etmedim.</p>
                                 
                                 <p>Onun anısına devam etme kararı aldım. Bugün Piyongo, hem ona verdiğim bir söz hem de hayata yeniden tutunma yolum. Portekiz yolculuğunuzu bir nebze kolaylaştırmak için bu rehberleri ve araçları üretiyorum. Bu proje, zorluklara karşı duruşumun bir sembolü.</p>
                                 
@@ -381,10 +387,7 @@ const TRANSLATIONS = {
                                     Piyongo tamamen ücretsizdir. Hikayemin bir parçası olduğunuz ve bana destek verdiğiniz için teşekkür ederim.
                                 </p>
                             </div>
-                            <div class="mt-12 flex flex-col md:flex-row gap-4">
-                                <a href="https://ko-fi.com/piyongo" class="inline-block bg-[#FF4F00] text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">Bir kahve ısmarla —></a>
-                                <a href="contact.html" class="inline-block border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">İletişime geç</a>
-                            </div>
+                            
                         </div>
                     </div>`
                 },
@@ -395,7 +398,7 @@ const TRANSLATIONS = {
                     <div class="bg-black text-white rounded-[40px] p-8 md:p-14 mt-12 relative overflow-hidden border border-neutral-800">
                         <div class="relative z-10 max-w-3xl">
                             <div class="font-sans text-base md:text-lg space-y-6 text-neutral-300 leading-relaxed tracking-wide">
-                                <p>O meu nome é <strong>Yusuf Kaya</strong>. Trabalho como designer digital há muitos anos. Após 11 anos de carreira, tudo mudou num único dia e perdi o meu emprego. Aos 42 anos, decidi colocar toda a minha vida em duas malas e mudar-me para Lisboa para começar um novo capítulo.</p>
+                                <p>O meu nome é <strong>Yusuf</strong>. Aos 42 anos, decidi colocar toda a minha vida em duas malas e mudar-me para Lisboa para começar um novo capítulo.</p>
                                 
                                 <p>Não comecei esta jornada sozinho. Tive o apoio incondicional do meu companheiro de vida de 15 anos. Foi ele quem acreditou em mim em cada madrugada em que trabalhei para dar vida a este projeto. No entanto, perdi-o em pleno processo de mudança. A dor foi profunda, mas não desisti.</p>
                                 
@@ -403,10 +406,7 @@ const TRANSLATIONS = {
                                 
                                 <p class="text-[#FF4F00] font-bold pt-4 text-lg md:text-xl">Obrigado por fazer parte desta jornada.</p>
                             </div>
-                            <div class="mt-12 flex flex-col md:flex-row gap-4">
-                                <a href="https://ko-fi.com/piyongo" class="inline-block bg-[#FF4F00] text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">Pagar um café —></a>
-                                <a href="contact.html" class="inline-block border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white hover:text-black transition-colors text-center text-sm md:text-base">Entrar em contacto</a>
-                            </div>
+                            
                         </div>
                     </div>`
                 },
