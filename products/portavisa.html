@@ -3,321 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-    <title>PortaVisa - Portugal Expat Guide</title>
-    <meta name="description" content="Essential information for expats moving to Portugal">
+    <title>PortaVisa - Portugal Migration Assistant - Piyongo</title>
     
-    <!-- Fonts -->
+    <link rel="icon" type="image/svg+xml" href="../assets/favIcon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Design System -->
-    <link rel="stylesheet" href="assets/css/design-system.css">
-    
+    <link rel="stylesheet" href="../assets/design-system.css">
+
     <script>
-        window.PAGE_CONFIG = {
-            id: 'portavisa',
-            type: 'product',
-            name: 'PORTAVISA',
-            category: 'EXPAT',
-            version: '2.0.0'
-        };
+        window.PAGE_CONFIG = { id: 'portavisa', type: 'product', name: 'PortaVisa' };
     </script>
     
-    <!-- Data -->
-    <script src="portavisa-data.js"></script>
+    <style>
+
+        
+        /* --- CONTENT TYPOGRAPHY & LINK SYSTEM --- */
+
+/* Prose alanı içindeki satır aralıklarını daralt ama ferah tut (Modular Scale) */
+.prose {
+    line-height: 1.45; /* Standart 1.6'dan daha teknik ve odaklı bir değer */
+    color: #4a4a4a;
+}
+
+/* Link Stilleri: Tasarım Sistemiyle Uyumlu */
+.pv-link {
+    color: #FF4F00;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1.5px solid rgba(255, 79, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.pv-link:hover {
+    border-bottom-color: #FF4F00;
+    background-color: rgba(255, 79, 0, 0.05);
+}
+
+/* Paragraf ve Liste Boşlukları */
+.prose p { margin-bottom: 1rem; }
+.prose ul { margin-bottom: 1rem; }
+.prose li { margin-bottom: 0.25rem; }
+
+        /* ... (Mevcut Desktop stillerin hepsi kalıyor) ... */
+
+    /* --- MOBILE OPTIMIZATION --- */
+    @media (max-width: 768px) {
+        /* 1. Nav Panel: İkonlar Üste, Metinler Alta */
+        .nav-tab {
+            flex-direction: column; /* Dikey dizilim */
+            padding: 1rem 0.5rem;
+            gap: 6px;
+        }
+        .nav-tab span {
+            font-size: 9px; /* Mobilde metni biraz küçültelim */
+            letter-spacing: 0.05em;
+        }
+        .nav-tab svg {
+            width: 20px; /* İkonu mobilde biraz daha vurgulayalım */
+            height: 20px;
+        }
+
+        /* 2. Article Footer: Centered Layout */
+        .card-footer {
+            flex-direction: column; /* Üst üste diz */
+            align-items: center; /* Yatayda merkezle */
+            text-align: center;
+            gap: 1.5rem; /* Elemanlar arası boşluk */
+            padding: 2rem 1rem;
+        }
+
+        .card-footer .text-\[9px\] {
+            display: flex;
+            flex-direction: column; /* Kaynak ve Tarih alt alta */
+            gap: 8px;
+            width: 100%;
+        }
+
+        .card-footer .text-\[9px\] span {
+            margin-right: 0 !important; /* Desktop'taki sağ boşluğu kaldır */
+        }
+
+        /* Aksiyon butonlarını (Print, Copy, Share) mobilde merkezle */
+        .card-footer .flex.justify-end {
+            justify-content: center; /* Merkezle */
+            width: 100%;
+            gap: 10px;
+        }
+        
+        .action-btn {
+            flex: 1; /* Butonlar eşit genişlikte olsun */
+            justify-content: center;
+            padding: 10px 8px;
+            font-size: 10px;
+        }
+    }
+        /* --- CHROME COMPATIBILITY & RATIONAL DESIGN --- */
+        
+        /* Chrome'da içerik kaybolmasını engellemek için ana yapı */
+        html, body { height: 100%; margin: 0; padding: 0; }
+        
+        .main-content-area {
+            display: block; /* Flex çakışmalarını önlemek için */
+            width: 100%;
+            min-height: 100vh;
+        }
+
+        /* 1. SEARCH SECTION: Whitespace as Authority */
+        .search-section { padding: 6rem 0; display: flex; justify-content: center; }
+        .search-wrapper { position: relative; width: 100%; max-width: 700px; }
+        .search-input {
+            width: 100%; background-color: white; border: 1.5px solid #e5e5e5;
+            border-radius: 999px; padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+            font-family: monospace; font-size: 1rem; outline: none; transition: all 0.2s ease;
+        }
+        /* Refined Focus Stroke (2px as requested) */
+        .search-input:hover, .search-input:focus {
+            border: 2px solid #FF4F00; box-shadow: 0 10px 30px -10px rgba(255, 79, 0, 0.08);
+        }
+        .search-icon { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); color: #d1d5db; transition: color 0.2s; }
+        .search-input:focus + .search-icon { color: #FF4F00; }
+
+        /* 2. COMPACT NAV PANEL: The Command Center */
+        .nav-panel {
+            width: 100%; background: white; border: 1px solid #e5e5e5;
+            border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; margin-bottom: 4rem;
+        }
+        /* Top Part: Koyu Tonlar (Selected: Orange) */
+        .main-nav { display: flex; background: #f0f0f0; border-bottom: 1px solid #e5e5e5; }
+        .nav-tab {
+            flex: 1; display: flex; align-items: center; justify-content: center;
+            gap: 10px; padding: 1.25rem; cursor: pointer; transition: all 0.2s ease;
+            color: #9ca3af; font-family: monospace; font-weight: 700;
+            font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; border-right: 1px solid #e5e5e5;
+        }
+        .nav-tab:last-child { border-right: none; }
+        /* Selected State: Orange BG, White Content */
+        .nav-tab.active { background: #FF4F00; color: white; }
+        .nav-tab.active svg { stroke: white; }
+        .nav-tab:hover:not(.active) { background: #e5e5e5; color: black; }
+        .nav-tab svg { width: 18px; height: 18px; stroke-width: 2.5; }
+
+        /* Bottom Part: Article White */
+        .sub-nav { display: flex; gap: 12px; padding: 14px 24px; background: #ffffff; justify-content: center; overflow-x: auto; }
+        .sub-pill {
+            padding: 6px 16px; font-family: monospace; font-size: 10px; font-weight: 700;
+            text-transform: uppercase; color: #a3a3a3; border-radius: 999px; transition: all 0.2s; white-space: nowrap;
+        }
+        .sub-pill:hover:not(.active) { color: black; background: #f5f5f5; }
+        .sub-pill.active { background: #FF4F00; color: white; }
+
+        /* 3. ARTICLES: Brutalist Stroke System */
+        .pv-card { 
+            border: 1px solid black; border-radius: 24px; background: white; 
+            overflow: hidden; transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); position: relative;
+        }
+        /* Hover: Sag ve Altta Kalın Border */
+        .pv-card:hover { 
+            box-shadow: 6px 6px 0px 0px black; 
+            transform: translate(-2px, -2px);
+        }
+
+        .card-footer { background-color: #fafafa; border-top: 1px solid black; padding: 1.5rem 2rem; }
+
+        /* Heart Icon: Scaled and Repositioned */
+        .fav-btn { transform: scale(1.1); transition: all 0.2s ease; margin-right: -6px; margin-top: -6px; }
+        .fav-btn svg { stroke: #d1d5db; transition: all 0.2s; }
+        .fav-btn:hover svg { stroke: #FF4F00; }
+        .fav-btn.active svg { fill: #FF4F00; stroke: #FF4F00; }
+
+        /* Action Buttons: High Visibility */
+        .action-btn {
+            background: white; border: 2px solid #e5e5e5; border-radius: 12px;
+            padding: 8px 16px; color: black; font-family: monospace; font-size: 0.75rem;
+            font-weight: 800; text-transform: uppercase; display: flex; align-items: center; gap: 8px; transition: all 0.2s;
+        }
+        .action-btn:hover { border-color: black; background: #fdfdfd; transform: translateY(-1px); }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body class="min-h-screen bg-neutral-50">
+<body class="bg-[#fafafa] text-black font-sans selection:bg-[#FF4F00] selection:text-white">
+
+    <script src="../js/config.js"></script>
+    <script src="../js/translations.js"></script>
+    <script src="../js/portavisa-data.js"></script>
+    <script src="../js/components.js"></script>
     
-    <a href="#main" class="skip-to-main">Skip to main content</a>
+    <div id="header-mount"></div>
 
-    <!-- Load Core -->
-    <script src="config.js"></script>
-    <script src="translations.js"></script>
-    <script src="components.js"></script>
+    <div class="main-content-area">
+        <main class="max-w-6xl mx-auto px-6 w-full pb-32">
+            
+            <section class="search-section">
+                <div class="search-wrapper">
+                    <input type="text" id="pv-search" class="search-input" placeholder="Search across all guides..." autocomplete="off">
+                    <div class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                </div>
+            </section>
 
-    <!-- Language Switcher -->
-    <div class="max-w-7xl mx-auto px-4 pt-6 flex justify-end">
-        <div class="flex items-center gap-3 text-sm font-mono">
-            <button onclick="switchLanguage('en')" 
-                    class="lang-option flex items-center gap-2 transition-opacity hover:opacity-100" 
-                    data-lang="en"
-                    aria-label="Switch to English">
-                <span>🇬🇧</span>
-                <span>English</span>
-            </button>
-            <span class="text-neutral-300">|</span>
-            <button onclick="switchLanguage('tr')" 
-                    class="lang-option flex items-center gap-2 transition-opacity hover:opacity-100" 
-                    data-lang="tr"
-                    aria-label="Switch to Turkish">
-                <span>🇹🇷</span>
-                <span>Türkçe</span>
-            </button>
-        </div>
+            <div class="controls-container flex flex-col items-center">
+                <div class="nav-panel">
+                    <div id="journey-tabs" class="main-nav"></div>
+                    <div id="category-filters" class="sub-nav no-scrollbar"></div>
+                </div>
+            </div>
+
+            <div id="content-grid" class="grid grid-cols-1 gap-12 w-full"></div>
+        </main>
     </div>
 
-    <!-- Main Frame -->
-    <main id="main" class="max-w-7xl mx-auto px-4 pt-8 pb-16 border-2 border-black mt-4 bg-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
-        
-        <!-- Header Inside Frame -->
-        <header class="pb-8 mb-12 border-b-2 border-black">
-            <div class="flex items-center gap-3 mb-4">
-                <a href="index.html" class="text-neutral-500 hover:text-neutral-900 transition-colors text-xs uppercase tracking-wider">INDEX</a>
-                <span class="text-neutral-300">/</span>
-                <span class="text-neutral-400 text-xs uppercase tracking-wider">EXPAT</span>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
-                <div>
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">🇵🇹 PORTAVISA.CORE</h1>
-                    <p class="text-neutral-600 text-lg max-w-2xl" style="font-family: var(--font-sans);">
-                        Essential guides for expats moving to Portugal
-                    </p>
-                </div>
-                
-                <div class="flex items-center gap-3 flex-shrink-0">
-                    <a href="https://ko-fi.com/portavisa" 
-                       target="_blank" 
-                       class="btn btn-primary">
-                        <span class="text-xl">☕</span>
-                        <span class="hidden sm:inline">BUY ME A BICA</span>
-                    </a>
-                    
-                    <a href="https://calendly.com/portavisa/30min" 
-                       target="_blank" 
-                       class="btn btn-secondary">
-                        <span class="text-xl">📅</span>
-                        <span class="hidden sm:inline">BOOK CONSULT</span>
-                    </a>
-                </div>
-            </div>
-        </header>
+    <div id="footer-mount"></div>
 
-        <!-- Search -->
-        <section class="mb-12">
-            <input 
-                type="text" 
-                id="searchInput"
-                class="w-full bg-neutral-50 border-2 border-black px-6 py-4 text-lg focus:outline-none focus:border-primary transition-colors font-mono"
-                placeholder="Search guides..."
-                aria-label="Search guides">
-        </section>
-
-        <!-- Layout -->
-        <div class="flex flex-col lg:flex-row gap-8">
-            
-            <!-- Sidebar -->
-            <aside class="lg:w-64 flex-shrink-0">
-                <nav class="lg:sticky lg:top-8" aria-label="Categories">
-                    <h2 class="text-xs uppercase tracking-wider text-neutral-500 mb-4">Categories</h2>
-                    <div id="categoryList" class="space-y-2">
-                        <!-- Generated by JS -->
-                    </div>
-                </nav>
-            </aside>
-
-            <!-- Content -->
-            <div class="flex-1 min-w-0">
-                <div id="contentArea" class="space-y-8">
-                    <!-- Generated by JS -->
-                </div>
-                
-                <div id="emptyState" class="text-center py-24 hidden">
-                    <p class="text-neutral-400">No guides found</p>
-                </div>
-            </div>
-
-        </div>
-
-    </main>
-
-    <!-- Footer injected by components.js -->
+    <div id="copyOverlay" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3 font-bold uppercase tracking-widest transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 rounded-full shadow-lg">
+        <span data-i18n="ui.msg_copied">COPIED!</span>
+    </div>
 
     <script>
-        let currentCategory = 'all';
-        let currentLang = 'en';
-        let activeTag = null;
+        const ICONS = {
+            print: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>`,
+            copy: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2-2v1"></path></svg>`,
+            share: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>`,
+            heart: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`,
+            compass: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>`,
+            file: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`,
+            home: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>`
+        };
 
-        document.addEventListener('DOMContentLoaded', function() {
-            currentLang = localStorage.getItem('user_lang') || 'en';
-            
-            renderCategories();
-            renderContent();
-            
-            document.getElementById('searchInput').addEventListener('input', function(e) {
-                const query = e.target.value.toLowerCase();
-                filterContent(query);
+        const TAB_LABELS = {
+            discover: { icon: ICONS.compass, long: { en: 'DISCOVERING', tr: 'KEŞFEDİYORUM', pt: 'DESCOBRINDO' } },
+            apply: { icon: ICONS.file, long: { en: 'APPLYING', tr: 'BAŞVURUYORUM', pt: 'APLICANDO' } },
+            settle: { icon: ICONS.home, long: { en: 'LIVING', tr: 'YAŞIYORUM', pt: 'VIVENDO' } }
+        };
+
+        let activeStage = 'discover'; let activeCategory = 'all'; let searchQuery = '';
+        let favArticles = JSON.parse(localStorage.getItem('pv_fav_articles')) || [];
+        const currentLang = localStorage.getItem('userLang') || 'en';
+
+        function renderTabs() {
+            const container = document.getElementById('journey-tabs'); container.innerHTML = '';
+            ['discover', 'apply', 'settle'].forEach(stage => {
+                const data = TAB_LABELS[stage]; const isActive = stage === activeStage;
+                const btn = document.createElement('div');
+                btn.className = `nav-tab ${isActive ? 'active' : ''}`;
+                btn.innerHTML = `${data.icon} <span>${data.long[currentLang] || data.long['en']}</span>`;
+                btn.onclick = () => { activeStage = stage; activeCategory = 'all'; searchQuery = ''; document.getElementById('pv-search').value = ''; renderTabs(); renderFilters(); renderCards(); };
+                container.appendChild(btn);
             });
-            
-            window.addEventListener('languageChanged', function(e) {
-                currentLang = e.detail.lang;
-                renderCategories();
-                renderContent();
+        }
+
+        function renderFilters() {
+            const container = document.getElementById('category-filters'); container.innerHTML = '';
+            const stageItems = PORTAVISA_DB.filter(item => item.stage === activeStage);
+            const categories = new Set(['all', 'saved']);
+            stageItems.forEach(item => categories.add(item.category[currentLang] || item.category['en']));
+            const labels = { all: { en: 'ALL', tr: 'HEPSİ', pt: 'TODOS' }, saved: { en: 'SAVED', tr: 'KAYDEDİLEN', pt: 'SALVOS' } };
+            categories.forEach(cat => {
+                const isActive = activeCategory === cat;
+                const btn = document.createElement('button');
+                btn.className = `sub-pill whitespace-nowrap ${isActive ? 'active' : ''}`;
+                btn.textContent = labels[cat] ? labels[cat][currentLang] : cat;
+                btn.onclick = () => { activeCategory = cat; renderFilters(); renderCards(); };
+                container.appendChild(btn);
             });
+        }
+
+function renderCards() {
+            const grid = document.getElementById('content-grid'); grid.innerHTML = '';
+            
+            // Hata almamak için çevirileri güvenli bir şekilde alalım
+            const uiSource = (window.translations && window.translations[currentLang]?.ui?.source) || 'SOURCE';
+            const uiDate = (window.translations && window.translations[currentLang]?.ui?.date) || 'DATE';
+            const uiNoResults = (window.translations && window.translations[currentLang]?.ui?.no_results) || 'No matching guides found';
+
+            let items = searchQuery.length > 0 ? PORTAVISA_DB.filter(item => (item.title[currentLang] || item.title['en']).toLowerCase().includes(searchQuery.toLowerCase()) || (item.content[currentLang] || item.content['en']).toLowerCase().includes(searchQuery.toLowerCase())) : PORTAVISA_DB.filter(item => item.stage === activeStage);
+            if (searchQuery.length === 0) { if (activeCategory === 'saved') items = items.filter(i => favArticles.some(f => f.id === i.id)); else if (activeCategory !== 'all') items = items.filter(i => (i.category[currentLang] || i.category['en']) === activeCategory); }
+            
+            if (items.length === 0) { grid.innerHTML = `<div class="p-20 text-center text-neutral-300 font-mono text-xs uppercase tracking-widest">${uiNoResults}</div>`; return; }
+            
+            items.forEach(item => {
+                const title = item.title[currentLang] || item.title['en']; const content = item.content[currentLang] || item.content['en'];
+                const isFav = favArticles.some(f => f.id === item.id);
+                const card = document.createElement('div'); card.className = 'pv-card flex flex-col group';
+                card.innerHTML = `
+                    <div class="p-8 md:p-10 flex-grow">
+                        <div class="flex justify-between items-start mb-6">
+                            <h2 class="text-2xl md:text-3xl font-black leading-tight tracking-tight text-neutral-800 pt-1">${title}</h2>
+                            <button onclick="toggleArticleFav('${item.id}', '${title.replace(/'/g, "\\'")}')" class="fav-btn flex-shrink-0 ${isFav ? 'active' : ''}">
+                                ${ICONS.heart}
+                            </button>
+                        </div>
+                        <div class="prose prose-sm md:prose-base font-mono text-neutral-500 leading-relaxed max-w-none">${content}</div>
+                    </div>
+                    <div class="card-footer px-8 py-5 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="text-[9px] font-bold font-mono uppercase tracking-widest text-neutral-400">
+                            <span class="mr-4"><span class="text-neutral-300 uppercase">${uiSource}:</span> ${item.source}</span>
+                            <span><span class="text-neutral-300 uppercase">${uiDate}:</span> ${item.date}</span>
+                        </div>
+                        <div class="flex justify-end gap-3">
+                            <button onclick="window.print()" class="action-btn">${ICONS.print} <span>PRINT</span></button>
+                            <button onclick="copyContent('${item.id}')" class="action-btn">${ICONS.copy} <span>COPY</span></button>
+                            <button onclick="shareContent('${title}')" class="action-btn">${ICONS.share} <span>SHARE</span></button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+        document.getElementById('pv-search').addEventListener('input', (e) => { searchQuery = e.target.value.trim(); renderCards(); });
+        function toggleArticleFav(id, title) { const idx = favArticles.findIndex(f => f.id === id); if (idx > -1) favArticles.splice(idx, 1); else favArticles.push({ id, title, url: window.location.href }); localStorage.setItem('pv_fav_articles', JSON.stringify(favArticles)); renderCards(); }
+        function copyContent(id) { const item = PORTAVISA_DB.find(i => i.id === id); if(!item) return; const temp = document.createElement("div"); temp.innerHTML = item.content[currentLang] || item.content['en']; navigator.clipboard.writeText(`${item.title[currentLang]}\n\n${temp.innerText}`).then(() => { const overlay = document.getElementById('copyOverlay'); overlay.classList.remove('opacity-0', 'translate-y-20'); setTimeout(() => overlay.classList.add('opacity-0', 'translate-y-20'), 2000); }); }
+        function shareContent(title) { if (navigator.share) navigator.share({ title: 'PortaVisa', text: title, url: window.location.href }); else alert('Link copied!'); }
+
+        document.addEventListener('DOMContentLoaded', () => { 
+            if(typeof initLanguageSystem === 'function') initLanguageSystem(); 
+            if(typeof initComponents === 'function') initComponents(); // Header/Footer mount tetikleyici
+            renderTabs(); renderFilters(); renderCards(); 
         });
-
-        function renderCategories() {
-            const categoriesRaw = ['all', ...new Set(PORTAVISA_CONTENT.map(item => item.category[currentLang]))];
-            const container = document.getElementById('categoryList');
-            
-            container.innerHTML = categoriesRaw.map(cat => {
-                const isActive = cat === currentCategory || (currentCategory === 'all' && cat === 'all');
-                const displayCat = cat === 'all' ? (currentLang === 'en' ? 'All' : 'Tümü') : cat;
-                
-                return `
-                    <button 
-                        class="w-full text-left px-4 py-3 text-sm font-medium border-2 border-black transition-all ${isActive ? 'bg-black text-white' : 'bg-white hover:bg-neutral-50'}"
-                        onclick="selectCategory('${cat}')"
-                        aria-pressed="${isActive}">
-                        ${displayCat}
-                    </button>
-                `;
-            }).join('');
-        }
-
-        function selectCategory(category) {
-            currentCategory = category;
-            activeTag = null;
-            renderCategories();
-            renderContent();
-        }
-
-        function filterByTag(tag) {
-            activeTag = tag;
-            currentCategory = 'all';
-            renderCategories();
-            renderContent();
-        }
-
-        function formatDate(dateString) {
-            const date = new Date(dateString);
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return date.toLocaleDateString(currentLang === 'en' ? 'en-US' : 'tr-TR', options);
-        }
-
-        function renderContent(filteredData = null) {
-            let data;
-            
-            if (activeTag) {
-                data = PORTAVISA_CONTENT.filter(item => item.tags[currentLang].includes(activeTag));
-            } else if (currentCategory === 'all') {
-                data = PORTAVISA_CONTENT;
-            } else {
-                data = PORTAVISA_CONTENT.filter(item => item.category[currentLang] === currentCategory);
-            }
-            
-            if (filteredData) data = filteredData;
-            
-            const container = document.getElementById('contentArea');
-            const emptyState = document.getElementById('emptyState');
-
-            if (data.length === 0) {
-                container.innerHTML = '';
-                emptyState.classList.remove('hidden');
-                return;
-            }
-
-            emptyState.classList.add('hidden');
-            
-            container.innerHTML = data.map(item => {
-                const title = currentLang === 'en' ? item.title_en : item.title_tr;
-                const content = currentLang === 'en' ? item.content_en : item.content_tr;
-                const category = item.category[currentLang];
-                const tags = item.tags[currentLang];
-                const source = item.source;
-                const formattedDate = formatDate(item.date);
-                
-                const lblSource = currentLang === 'en' ? 'SOURCE' : 'KAYNAK';
-                const lblDate = currentLang === 'en' ? 'DATE' : 'TARİH';
-                const txtShare = currentLang === 'en' ? 'Share' : 'Paylaş';
-                const txtCopy = currentLang === 'en' ? 'Copy' : 'Kopyala';
-                const txtPrint = currentLang === 'en' ? 'Print' : 'Yazdır';
-
-                return `
-                    <article class="article-card" id="article-${item.id}">
-                        <div class="article-header">
-                            <span class="category-label">${category}</span>
-                            <div class="article-meta">
-                                <span><strong>${lblSource}:</strong> ${source}</span>
-                                <span><strong>${lblDate}:</strong> ${formattedDate}</span>
-                            </div>
-                        </div>
-                        
-                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight leading-tight mb-6">${title}</h2>
-                        
-                        <div class="prose prose-neutral max-w-none text-neutral-800 leading-relaxed text-lg" style="font-family: var(--font-sans);">
-                            ${content}
-                        </div>
-                        
-                        <div class="article-footer">
-                            <div class="tags-wrapper">
-                                ${tags.map(tag => `
-                                    <button onclick="filterByTag('${tag}')" class="tag-text">#${tag}</button>
-                                `).join('')}
-                            </div>
-
-                            <div class="actions-wrapper">
-                                <button onclick="window.print()" class="btn-utility">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-                                    ${txtPrint}
-                                </button>
-                                
-                                <button onclick="copyArticle(${item.id})" class="btn-utility">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                                    ${txtCopy}
-                                </button>
-                                
-                                <button onclick="shareArticle('${title.replace(/'/g, "\\'")}', ${item.id})" class="btn-utility">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
-                                    ${txtShare}
-                                </button>
-                            </div>
-                        </div>
-                    </article>
-                `;
-            }).join('');
-        }
-
-        function filterContent(query) {
-            if (!query) {
-                activeTag = null;
-                renderContent();
-                return;
-            }
-
-            const filtered = PORTAVISA_CONTENT.filter(item => {
-                const titleMatch = (currentLang === 'en' ? item.title_en : item.title_tr).toLowerCase().includes(query);
-                const contentMatch = (currentLang === 'en' ? item.content_en : item.content_tr).toLowerCase().includes(query);
-                const tagMatch = item.tags[currentLang].some(tag => tag.toLowerCase().includes(query));
-                const sourceMatch = item.source.toLowerCase().includes(query);
-                
-                return titleMatch || contentMatch || tagMatch || sourceMatch;
-            });
-
-            activeTag = null;
-            renderContent(filtered);
-        }
-
-        function copyArticle(id) {
-            const article = document.getElementById(`article-${id}`);
-            const text = article.innerText;
-            navigator.clipboard.writeText(text).then(() => alert('Copied!'));
-        }
-
-        function shareArticle(title, id) {
-            const url = `${window.location.origin}${window.location.pathname}?article=${id}`;
-            navigator.clipboard.writeText(url).then(() => alert('Link copied!'));
-        }
-
-        window.selectCategory = selectCategory;
-        window.filterByTag = filterByTag;
-        window.copyArticle = copyArticle;
-        window.shareArticle = shareArticle;
     </script>
-
 </body>
 </html>

@@ -2,6 +2,32 @@
  * js/translations.js
  * Multi-language Content Store (EN, TR, PT)
  */
+window.translations = {
+    en: {
+        ui: {
+            source: "SOURCE",
+            date: "DATE",
+            no_results: "No matching guides found"
+        },
+        // ... diğer en çevirileri
+    },
+    tr: {
+        ui: {
+            source: "KAYNAK",
+            date: "TARİH",
+            no_results: "Eşleşen rehber bulunamadı"
+        },
+        // ... diğer tr çevirileri
+    },
+    pt: {
+        ui: {
+            source: "FONTE",
+            date: "DATA",
+            no_results: "Nenhum guia encontrado"
+        },
+        // ... diğer pt çevirileri
+    }
+};
 
 const TRANSLATIONS = {
     // ============================================
@@ -49,7 +75,7 @@ const TRANSLATIONS = {
             footer_social: 'Bağlantı',
 
             // FOOTER LINKS
-            footer_about: 'Hakkında',
+            footer_about: 'Hakkımda',
             footer_contact: 'İletişim',
             footer_privacy: 'Gizlilik',
             footer_terms: 'Koşullar',
@@ -110,6 +136,9 @@ const TRANSLATIONS = {
             btn_add_para: 'ADD PARAGRAPH',
             btn_add_sent: 'ADD SENTENCE',
             btn_strip: 'REMOVE STYLE',
+            source: "SOURCE",
+            date: "DATE",
+            no_results: "No matching guides found",
 
             // İSTATİSTİK LABEL'LARI (HEPSİ BÜYÜK HARF)
             stat_chars: 'CHARS',
@@ -162,7 +191,10 @@ const TRANSLATIONS = {
             btn_add_para: 'PARAGRAF EKLE',
             btn_add_sent: 'CÜMLE EKLE',
             btn_strip: 'BİÇİMİ TEMİZLE',
-            
+            ource: "KAYNAK",
+            date: "TARİH",
+            no_results: "Eşleşen rehber bulunamadı",
+
             // Girdi/Çıktı
             input_label: 'ÇALIŞMA ALANI',
             input_placeholder: 'Buraya yazın veya yapıştırın',
@@ -214,6 +246,9 @@ const TRANSLATIONS = {
             btn_add_para: 'ADICIONAR PARÁGRAFO',
             btn_add_sent: 'ADICIONAR FRASE',
             btn_strip: 'REMOVER FORMATAÇÃO',
+            source: "FONTE",
+            date: "DATA",
+            no_results: "Nenhum guia encontrado",
 
             // Input
             input_label: 'ÁREA DE TRABALHO',
