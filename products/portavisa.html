@@ -16,6 +16,7 @@
     </script>
     
     <style>
+<<<<<<< HEAD
 
         
         /* --- CONTENT TYPOGRAPHY & LINK SYSTEM --- */
@@ -189,10 +190,54 @@
     <script src="../js/config.js"></script>
     <script src="../js/translations.js"></script>
     <script src="../js/portavisa-data.js"></script>
+=======
+        .pv-card { transition: transform 0.2s, box-shadow 0.2s; }
+        .pv-card:hover { transform: translateY(-4px); box-shadow: 8px 8px 0px 0px #000; }
+        
+        .tab-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+        .tab-btn.active { background-color: black; color: white; border-color: black; transform: scale(1.02); }
+        .tab-btn:not(.active):hover { background-color: #f5f5f5; }
+
+        /* Tag Styles (Light & Clean) */
+        .tag-text { color: #a3a3a3; transition: color 0.2s; }
+        .tag-text:hover { color: #000000; text-decoration: underline; }
+
+        /* Filter Pills (Clean) */
+        .filter-pill { border: 1px solid #e5e5e5; color: #a3a3a3; } /* Default light */
+        .filter-pill:hover { border-color: #000; color: #000; }
+        .filter-pill.active { background-color: #FF4F00; color: white; border-color: #FF4F00; }
+
+        .card-footer { transition: background-color 0.3s ease; }
+        .pv-card:hover .card-footer { background-color: #f5f5f5; }
+
+        .fav-btn svg { transition: all 0.2s ease; }
+        .fav-btn:active svg { transform: scale(0.8); }
+        .fav-btn.active svg { fill: #FF4F00; color: #FF4F00; }
+
+        .search-container input { transition: all 0.3s ease; }
+        .search-container input:focus { border-color: #FF4F00; box-shadow: 0px 4px 20px rgba(255, 79, 0, 0.1); }
+        .search-container input:focus ~ div svg { color: #FF4F00; }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        @media print {
+            header, .controls-container, .actions, .filters, .search-container { display: none !important; }
+            .pv-card { border: 1px solid #ccc; box-shadow: none !important; break-inside: avoid; margin-bottom: 20px; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body class="bg-[#f5f5f5] text-black font-sans flex flex-col min-h-screen selection:bg-[#FF4F00] selection:text-white">
+
+    <script src="../js/config.js"></script>
+    <script src="../js/translations.js"></script>
+>>>>>>> 52f19f3246645aa2324a96b1ea0b6e55e30c3717
     <script src="../js/components.js"></script>
     
     <div id="header-mount"></div>
 
+<<<<<<< HEAD
     <div class="main-content-area">
         <main class="max-w-6xl mx-auto px-6 w-full pb-32">
             
@@ -221,10 +266,49 @@
     <div id="footer-mount"></div>
 
     <div id="copyOverlay" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3 font-bold uppercase tracking-widest transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 rounded-full shadow-lg">
+=======
+    <main class="flex-grow max-w-6xl mx-auto px-6 w-full pb-24 md:pb-32">
+        
+        <div class="hidden md:flex flex-row justify-between items-center mb-8 gap-6">
+            <div class="flex flex-col gap-2 w-full">
+                <p class="text-neutral-500 font-mono text-sm leading-relaxed max-w-xl" data-i18n="tools.pv_desc">Your interactive companion for Portugal D7 & D8 visas.</p>
+            </div>
+            
+            <div class="flex items-center gap-3 shrink-0">
+                <button id="favBtn" class="group p-1.5 transition-transform active:scale-90 focus:outline-none">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="hover:text-[#FF4F00] transition-colors"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+                </button>
+                <div id="coffee-btn-placeholder"></div>
+            </div>
+        </div>
+
+        <div class="search-container mb-8 relative group z-20 mt-6 md:mt-0">
+            <input type="text" id="pv-search" 
+                class="w-full bg-white rounded-2xl py-4 pl-14 pr-4 font-mono text-sm md:text-base outline-none border-2 border-transparent placeholder:text-neutral-300"
+                placeholder="Search articles, guides, or tags..." autocomplete="off">
+            <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-neutral-300 transition-colors duration-300">
+                    <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </div>
+        </div>
+
+        <div class="controls-container mb-8">
+            <div id="journey-tabs" class="grid grid-cols-3 md:flex gap-2 p-1 bg-white border-2 border-black rounded-[20px] mb-6 shadow-sm"></div>
+            <div id="category-filters" class="filters flex gap-2 overflow-x-auto no-scrollbar pb-2"></div>
+        </div>
+
+        <div id="content-grid" class="grid grid-cols-1 gap-6"></div>
+
+    </main>
+
+    <div id="copyOverlay" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-3 font-bold uppercase tracking-widest transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none z-50 shadow-[4px_4px_0px_0px_#FF4F00] rounded-xl">
+>>>>>>> 52f19f3246645aa2324a96b1ea0b6e55e30c3717
         <span data-i18n="ui.msg_copied">COPIED!</span>
     </div>
 
     <script>
+<<<<<<< HEAD
         const ICONS = {
             print: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>`,
             copy: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2-2v1"></path></svg>`,
@@ -253,11 +337,138 @@
                 btn.className = `nav-tab ${isActive ? 'active' : ''}`;
                 btn.innerHTML = `${data.icon} <span>${data.long[currentLang] || data.long['en']}</span>`;
                 btn.onclick = () => { activeStage = stage; activeCategory = 'all'; searchQuery = ''; document.getElementById('pv-search').value = ''; renderTabs(); renderFilters(); renderCards(); };
+=======
+        /* Database */
+        const PORTAVISA_DB = [
+            {
+                id: 'visa-comparison',
+                stage: 'discover',
+                category: { en: 'Visa Types', tr: 'Vize Türleri', pt: 'Tipos de Visto' },
+                source: 'VFS Global',
+                date: '15.01.2025',
+                tags: ['d7', 'd8', 'comparison'],
+                title: { en: 'D7 vs D8 Visa Comparison', tr: 'D7 ve D8 Vize Karşılaştırması', pt: 'Comparação D7 vs D8' },
+                content: {
+                    en: `<p class="mb-2"><strong>D7 (Passive Income):</strong> Requires consistent passive income (pension, dividends, rent). Minimum €820/mo.</p><p><strong>D8 (Digital Nomad):</strong> Requires remote work contract or freelance income. Minimum €3,280/mo (4x min wage).</p>`,
+                    tr: `<p class="mb-2"><strong>D7 (Pasif Gelir):</strong> Düzenli pasif gelir gerektirir (emeklilik, kira, temettü). Min €820/ay.</p><p><strong>D8 (Dijital Göçebe):</strong> Uzaktan çalışma sözleşmesi gerektirir. Min €3,280/ay (4x asgari ücret).</p>`,
+                    pt: `<p class="mb-2"><strong>D7 (Renda Passiva):</strong> Requer renda passiva consistente. Min €820/mês.</p><p><strong>D8 (Nómada Digital):</strong> Requer trabalho remoto. Min €3,280/mês.</p>`
+                }
+            },
+            {
+                id: 'nif-guide',
+                stage: 'apply',
+                category: { en: 'Legal', tr: 'Hukuki', pt: 'Legal' },
+                source: 'Official Guide',
+                date: '10.02.2026',
+                tags: ['nif', 'tax', 'documents'],
+                title: { en: 'Getting a NIF Number', tr: 'NIF Numarası Almak', pt: 'Obter Número NIF' },
+                content: {
+                    en: `<p class="mb-4">A NIF (Número de Identificação Fiscal) is your Portuguese tax ID. Required for everything.</p><p class="mb-2"><strong>Where to get it:</strong> Visit any Finanças office or Loja do Cidadão with your passport.</p><p class="mb-2"><strong>Documents needed:</strong></p><ul class="list-disc pl-6 mb-4 space-y-1"><li>Valid passport</li><li>Proof of address (rental contract or utility bill)</li></ul><p><strong>Cost:</strong> Free<br><strong>Processing time:</strong> Same day</p>`,
+                    tr: `<p class="mb-4">NIF (Número de Identificação Fiscal), Portekiz vergi kimlik numaranızdır. Neredeyse her şey için gereklidir.</p><p class="mb-2"><strong>Nereden alınır:</strong> Pasaportunuzla herhangi bir Finanças ofisi veya Loja do Cidadão'ya gidin.</p><p class="mb-2"><strong>Gerekli belgeler:</strong></p><ul class="list-disc pl-6 mb-4 space-y-1"><li>Geçerli pasaport</li><li>Adres kanıtı (kira sözleşmesi veya fatura)</li></ul><p><strong>Maliyet:</strong> Ücretsiz<br><strong>İşlem süresi:</strong> Aynı gün</p>`,
+                    pt: `<p class="mb-4">O NIF é o seu número de identificação fiscal.</p><p class="mb-2"><strong>Onde obter:</strong> Finanças ou Loja do Cidadão.</p><p><strong>Custo:</strong> Gratuito</p>`
+                }
+            },
+            {
+                id: 'bank-account',
+                stage: 'apply',
+                category: { en: 'Finance', tr: 'Finans', pt: 'Finanças' },
+                source: 'Banco de Portugal',
+                date: '01.02.2026',
+                tags: ['banking', 'money', 'proof'],
+                title: { en: 'Opening a Bank Account', tr: 'Banka Hesabı Açmak', pt: 'Abrir Conta Bancária' },
+                content: {
+                    en: `<p>You need a funded Portuguese bank account for the visa application. Recommended amount: 12x Minimum Wage (~€9,840).</p>`,
+                    tr: `<p>Vize başvurusu için fonlanmış bir Portekiz banka hesabı şarttır. Önerilen miktar: 12x Asgari Ücret (~€9,840).</p>`,
+                    pt: `<p>Necessita de uma conta bancária portuguesa financiada.</p>`
+                }
+            },
+            {
+                id: 'supermarkets',
+                stage: 'settle',
+                category: { en: 'Living', tr: 'Yaşam', pt: 'Vida' },
+                source: 'Numbeo',
+                date: '2026',
+                tags: ['food', 'cost', 'shopping'],
+                title: { en: 'Supermarket Guide', tr: 'Market Rehberi', pt: 'Guia de Supermercados' },
+                content: {
+                    en: `<ul class="list-disc pl-4 space-y-1"><li><strong>Pingo Doce:</strong> Local favorite, good prices.</li><li><strong>Continente:</strong> Large hypermarkets.</li><li><strong>Lidl/Aldi:</strong> Budget friendly.</li></ul>`,
+                    tr: `<ul class="list-disc pl-4 space-y-1"><li><strong>Pingo Doce:</strong> Yerel favori, iyi fiyatlar.</li><li><strong>Continente:</strong> Büyük hipermarketler.</li><li><strong>Lidl/Aldi:</strong> Bütçe dostu.</li></ul>`,
+                    pt: `<ul class="list-disc pl-4 space-y-1"><li><strong>Pingo Doce:</strong> Favorito local.</li></ul>`
+                }
+            }
+        ];
+
+        const currentLang = localStorage.getItem('userLang') || 'en';
+        
+        const TAG_DICT = {
+            'd7': { en: 'D7 Visa', tr: 'D7 Vizesi', pt: 'Visto D7' },
+            'd8': { en: 'D8 Visa', tr: 'D8 Vizesi', pt: 'Visto D8' },
+            'comparison': { en: 'Comparison', tr: 'Karşılaştırma', pt: 'Comparação' },
+            'nif': { en: 'NIF', tr: 'NIF', pt: 'NIF' },
+            'tax': { en: 'Tax', tr: 'Vergi', pt: 'Imposto' },
+            'documents': { en: 'Documents', tr: 'Belgeler', pt: 'Documentos' },
+            'banking': { en: 'Banking', tr: 'Bankacılık', pt: 'Bancário' },
+            'money': { en: 'Finance', tr: 'Finans', pt: 'Dinheiro' },
+            'proof': { en: 'Proof', tr: 'Kanıt', pt: 'Prova' },
+            'food': { en: 'Food', tr: 'Gıda', pt: 'Comida' },
+            'cost': { en: 'Cost', tr: 'Maliyet', pt: 'Custo' },
+            'shopping': { en: 'Shopping', tr: 'Alışveriş', pt: 'Compras' }
+        };
+
+        const ICONS = {
+            print: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>`,
+            copy: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`,
+            share: `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>`,
+            heart: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>`
+        };
+
+        const TAB_LABELS = {
+            discover: { icon: '🧭', short: { en: 'DISCOVER', tr: 'KEŞFET', pt: 'DESCOBRIR' }, long: { en: 'DISCOVERING', tr: 'KEŞFEDİYORUM', pt: 'DESCOBRINDO' } },
+            apply: { icon: '📂', short: { en: 'APPLY', tr: 'BAŞVUR', pt: 'APLICAR' }, long: { en: 'APPLYING', tr: 'BAŞVURUYORUM', pt: 'APLICANDO' } },
+            settle: { icon: '🏠', short: { en: 'LIVE', tr: 'YAŞA', pt: 'VIVER' }, long: { en: 'LIVING', tr: 'YAŞIYORUM', pt: 'VIVENDO' } }
+        };
+
+        let activeStage = 'discover';
+        let activeCategory = 'all';
+        let searchQuery = '';
+        let favArticles = JSON.parse(localStorage.getItem('pv_fav_articles')) || [];
+
+        function renderTabs() {
+            const container = document.getElementById('journey-tabs');
+            container.innerHTML = '';
+            
+            ['discover', 'apply', 'settle'].forEach(stage => {
+                const data = TAB_LABELS[stage];
+                const shortLabel = data.short[currentLang] || data.short['en'];
+                const longLabel = data.long[currentLang] || data.long['en'];
+                const isActive = stage === activeStage;
+                
+                const btn = document.createElement('button');
+                btn.className = `tab-btn relative flex flex-col md:flex-row items-center justify-center gap-1 md:gap-2 py-3 px-2 md:px-6 rounded-2xl border-2 border-transparent transition-all md:flex-1
+                    ${isActive ? 'active bg-black text-white' : 'text-neutral-400 hover:text-black hover:bg-neutral-50'}`;
+                
+                btn.innerHTML = `
+                    <span class="text-xl md:text-base">${data.icon}</span>
+                    <span class="md:hidden text-[10px] font-bold font-mono uppercase tracking-widest">${shortLabel}</span>
+                    <span class="hidden md:inline font-bold font-mono text-xs md:text-sm uppercase tracking-wider">${longLabel}</span>
+                `;
+                
+                btn.onclick = () => {
+                    activeStage = stage;
+                    activeCategory = 'all';
+                    searchQuery = '';
+                    document.getElementById('pv-search').value = '';
+                    renderTabs(); 
+                    renderFilters(); 
+                    renderCards(); 
+                };
+>>>>>>> 52f19f3246645aa2324a96b1ea0b6e55e30c3717
                 container.appendChild(btn);
             });
         }
 
         function renderFilters() {
+<<<<<<< HEAD
             const container = document.getElementById('category-filters'); container.innerHTML = '';
             const stageItems = PORTAVISA_DB.filter(item => item.stage === activeStage);
             const categories = new Set(['all', 'saved']);
@@ -269,10 +480,47 @@
                 btn.className = `sub-pill whitespace-nowrap ${isActive ? 'active' : ''}`;
                 btn.textContent = labels[cat] ? labels[cat][currentLang] : cat;
                 btn.onclick = () => { activeCategory = cat; renderFilters(); renderCards(); };
+=======
+            const container = document.getElementById('category-filters');
+            container.innerHTML = '';
+
+            const stageItems = PORTAVISA_DB.filter(item => item.stage === activeStage);
+            const categories = new Set(['all', 'saved']);
+            stageItems.forEach(item => {
+                const catName = item.category[currentLang] || item.category['en'];
+                categories.add(catName);
+            });
+
+            const labels = {
+                all: { en: 'ALL', tr: 'HEPSİ', pt: 'TODOS' },
+                saved: { en: 'SAVED', tr: 'KAYDEDİLEN', pt: 'SALVOS' } // HEART REMOVED
+            };
+
+            categories.forEach(cat => {
+                const isAll = cat === 'all';
+                const isSaved = cat === 'saved';
+                let label = cat;
+                if(isAll) label = labels.all[currentLang];
+                if(isSaved) label = labels.saved[currentLang];
+
+                const isActive = activeCategory === cat;
+
+                const btn = document.createElement('button');
+                // CLEANER PILL STYLE
+                btn.className = `filter-pill flex-shrink-0 px-4 py-2 rounded-xl text-[10px] md:text-xs font-bold font-mono uppercase tracking-wider border transition-all whitespace-nowrap 
+                    ${isActive ? 'active' : 'bg-white hover:border-black'}`;
+                btn.textContent = label;
+                btn.onclick = () => {
+                    activeCategory = cat;
+                    renderFilters();
+                    renderCards();
+                };
+>>>>>>> 52f19f3246645aa2324a96b1ea0b6e55e30c3717
                 container.appendChild(btn);
             });
         }
 
+<<<<<<< HEAD
 function renderCards() {
             const grid = document.getElementById('content-grid'); grid.innerHTML = '';
             
@@ -324,6 +572,139 @@ function renderCards() {
             if(typeof initLanguageSystem === 'function') initLanguageSystem(); 
             if(typeof initComponents === 'function') initComponents(); // Header/Footer mount tetikleyici
             renderTabs(); renderFilters(); renderCards(); 
+=======
+        function renderCards() {
+            const grid = document.getElementById('content-grid');
+            grid.innerHTML = '';
+            
+            let items = PORTAVISA_DB.filter(item => item.stage === activeStage);
+            
+            if (activeCategory === 'saved') {
+                items = items.filter(item => favArticles.some(fav => fav.id === item.id));
+            } else if (activeCategory !== 'all') {
+                items = items.filter(item => (item.category[currentLang] || item.category['en']) === activeCategory);
+            }
+
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                items = items.filter(item => {
+                    const title = (item.title[currentLang] || item.title['en']).toLowerCase();
+                    const content = (item.content[currentLang] || item.content['en']).toLowerCase();
+                    const tags = item.tags.join(' ').toLowerCase();
+                    return title.includes(q) || content.includes(q) || tags.includes(q);
+                });
+            }
+
+            if (items.length === 0) {
+                grid.innerHTML = `<div class="p-10 text-center text-neutral-400 font-mono">No matching content found.</div>`;
+                return;
+            }
+
+            items.forEach(item => {
+                const title = item.title[currentLang] || item.title['en'];
+                const content = item.content[currentLang] || item.content['en'];
+                const lbl_source = currentLang === 'tr' ? 'KAYNAK:' : (currentLang === 'pt' ? 'FONTE:' : 'SOURCE:');
+                const lbl_date = currentLang === 'tr' ? 'TARİH:' : (currentLang === 'pt' ? 'DATA:' : 'DATE:');
+                
+                const isFav = favArticles.some(fav => fav.id === item.id);
+                const heartClass = isFav ? 'active' : 'text-neutral-300 hover:text-black';
+
+                const card = document.createElement('div');
+                card.className = 'pv-card bg-white border-2 border-black rounded-[32px] overflow-hidden flex flex-col group';
+                
+                const upperBody = `
+                    <div class="p-6 md:p-8 flex-grow">
+                        <div class="flex justify-between items-center mb-6">
+                            <button onclick="toggleArticleFav('${item.id}', '${title.replace(/'/g, "\\'")}')" class="fav-btn p-2 -ml-2 rounded-full ${heartClass}">
+                                ${ICONS.heart}
+                            </button>
+
+                            <div class="text-[10px] md:text-xs font-bold font-mono uppercase tracking-wider text-neutral-400 text-right">
+                                <span class="mr-3 block md:inline"><span class="text-black">${lbl_source}</span> ${item.source}</span>
+                                <span class="hidden md:inline"><span class="text-black">${lbl_date}</span> ${item.date}</span>
+                            </div>
+                        </div>
+                        <div class="h-px bg-neutral-100 w-full mb-6"></div>
+                        <h2 class="text-xl md:text-3xl font-black mb-4 md:mb-6 leading-tight tracking-tight">${title}</h2>
+                        <div class="prose prose-sm md:prose-base font-mono text-neutral-600 leading-relaxed max-w-none">
+                            ${content}
+                        </div>
+                    </div>
+                `;
+
+                const footer = `
+                    <div class="card-footer bg-neutral-50 border-t-2 border-black/5 p-4 md:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                        <div class="flex flex-wrap gap-3 w-full md:w-auto">
+                            ${item.tags.map(tag => {
+                                const translatedTag = (TAG_DICT[tag] && (TAG_DICT[tag][currentLang] || TAG_DICT[tag]['en'])) || tag;
+                                return `<span class="tag-text text-xs font-bold font-mono uppercase cursor-pointer">#${translatedTag}</span>`;
+                            }).join('')}
+                        </div>
+                        <div class="flex md:justify-end gap-2 w-full md:w-auto">
+                            <button onclick="window.print()" class="icon-btn flex-1 md:flex-none flex justify-center items-center gap-2 px-4 py-3 md:py-2 border-2 border-neutral-200 rounded-xl bg-white hover:border-black transition-colors text-black">
+                                ${ICONS.print} <span class="inline font-bold font-mono text-xs uppercase tracking-wider">PRINT</span>
+                            </button>
+                            <button onclick="copyContent('${item.id}')" class="icon-btn flex-1 md:flex-none flex justify-center items-center gap-2 px-4 py-3 md:py-2 border-2 border-neutral-200 rounded-xl bg-white hover:border-black transition-colors text-black">
+                                ${ICONS.copy} <span class="inline font-bold font-mono text-xs uppercase tracking-wider">COPY</span>
+                            </button>
+                            <button onclick="shareContent('${title}')" class="icon-btn flex-1 md:flex-none flex justify-center items-center gap-2 px-4 py-3 md:py-2 border-2 border-neutral-200 rounded-xl bg-white hover:border-black transition-colors text-black">
+                                ${ICONS.share} <span class="inline font-bold font-mono text-xs uppercase tracking-wider">SHARE</span>
+                            </button>
+                        </div>
+                    </div>
+                `;
+
+                card.innerHTML = upperBody + footer;
+                grid.appendChild(card);
+            });
+        }
+
+        document.getElementById('pv-search').addEventListener('input', (e) => {
+            searchQuery = e.target.value.trim();
+            renderCards();
+        });
+
+        function toggleArticleFav(id, title) {
+            const index = favArticles.findIndex(fav => fav.id === id);
+            
+            if (index > -1) {
+                favArticles.splice(index, 1);
+            } else {
+                favArticles.push({
+                    id: id,
+                    title: title,
+                    url: window.location.href 
+                });
+            }
+            
+            localStorage.setItem('pv_fav_articles', JSON.stringify(favArticles));
+            renderCards();
+        }
+
+        function copyContent(id) {
+            const item = PORTAVISA_DB.find(i => i.id === id);
+            if(!item) return;
+            const temp = document.createElement("div");
+            temp.innerHTML = item.content[currentLang] || item.content['en'];
+            const text = `${item.title[currentLang]}\n\n${temp.innerText}`;
+            navigator.clipboard.writeText(text).then(() => {
+                const overlay = document.getElementById('copyOverlay');
+                overlay.classList.remove('opacity-0', 'translate-y-20');
+                setTimeout(() => { overlay.classList.add('opacity-0', 'translate-y-20'); }, 2000);
+            });
+        }
+
+        function shareContent(title) {
+            if (navigator.share) navigator.share({ title: 'PortaVisa Info', text: title, url: window.location.href });
+            else alert('URL copied to clipboard!');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if(typeof initLanguageSystem === 'function') initLanguageSystem();
+            renderTabs();
+            renderFilters();
+            renderCards();
+>>>>>>> 52f19f3246645aa2324a96b1ea0b6e55e30c3717
         });
     </script>
 </body>
