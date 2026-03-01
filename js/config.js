@@ -65,6 +65,16 @@
             tag: 'FORMAT',
             featured: false 
         },
+
+                { 
+            id: 'compare-list', 
+            link: 'tools/compare-list.html', 
+            titleKey: 'tools.compare_title', 
+            descKey: 'tools.compare_desc', 
+            tag: 'FORMAT',
+            featured: false 
+        },
+
         { 
             id: 'portavisa', 
             link: 'products/portavisa.html', 

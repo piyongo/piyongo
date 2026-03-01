@@ -177,9 +177,14 @@ const TRANSLATIONS = {
             btn_fix_spaces: 'FIX SPACES', 
             btn_rem_lines: 'REMOVE EMPTY LINES',
 
+            // Compare List
+            btn_compare: "COMPARE TEXT",
+            placeholder_left: "Paste the first text here",
+            placeholder_right: "Paste the second text here",
+
             // PortaVisa
             pv_calc_title: 'Schengen Calculator',
-            pv_calc_desc: 'Calculate remaining days.'
+            pv_calc_desc: 'Calculate remaining days.',
         },
         tr: {
             // Filtreler
@@ -235,6 +240,11 @@ const TRANSLATIONS = {
             btn_fix_spaces: 'BOŞLUK DÜZELT', 
             btn_rem_lines: 'BOŞ SATIR SİL',
 
+            // Liste Karsilastirici
+            btn_compare: "METNİ KARŞILAŞTIR",
+            placeholder_left: "1",
+            placeholder_right: "2",
+
             // PortaVisa
             pv_calc_title: 'Schengen Hesaplayıcı',
             pv_calc_desc: 'Kalan gün hesabı.'
@@ -287,6 +297,12 @@ const TRANSLATIONS = {
             btn_title: 'TÍTULO',
             btn_inverse: 'INVERSO',
             
+            // List Compare
+            btn_compare: "COMPARAR TEXTO",
+            placeholder_left: "Cole o texto premiero aqui",
+            placeholder_right: "Cole o texto secundo aqui",
+
+
             // Lista
             btn_to_commas: 'LINHAS → VÍRGULAS', 
             btn_to_lines: 'VÍRGULAS → LINHAS',
@@ -310,7 +326,8 @@ const TRANSLATIONS = {
             clean_title: 'Line Cleaner', clean_desc: 'Removes empty lines and extra spaces within the list.',
             lorem_title: 'Lorem Ipsum', lorem_desc: 'Generates placeholder text for your designs.',
             style_title: 'Style Remover', style_desc: 'Removes formatting from text for a clean paste.',
-            portavisa_title: 'Porta Visa', portavisa_desc: 'Comprehensive guide about Portugal residince visa types.'
+            compare_title: "Compare Text", compare_desc: "Compare the two texts instantly and easily.",
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Comprehensive guide about Portugal residince visa types.',
         },
         tr: {
             char_title: 'Karakter Sayıcı', char_desc: 'Karakterleri, kelimeleri, cümleleri ve paragrafları sayar.',
@@ -319,7 +336,8 @@ const TRANSLATIONS = {
             clean_title: 'Metin Temizleyici', clean_desc: 'Boş satırları ve fazla boşlukları temizler.',
             lorem_title: 'Metin Oluşturucu', lorem_desc: 'Geçici metin ihtiyaçlarınız için taslak metinler oluşturur.',
             style_title: 'Biçim Temizleyici', style_desc: 'Metin biçimlendirmelerini kaldırarak temiz yapıştırma sağlar.',
-            portavisa_title: 'Porta Visa', portavisa_desc: 'Portekiz oturum vizeleri ve yaşamı hakkında kapsamlı bilgiler'
+            compare_title: "Liste Karşılaştırıcı", compare_desc: "Iki farklı metni anında kolayca karşılaştırın",
+            portavisa_title: 'Porta Visa', portavisa_desc: 'Portekiz oturum vizeleri ve yaşamı hakkında kapsamlı bilgiler',
         },
         pt: {
             char_title: 'Contador de Caracteres', char_desc: 'Conte caracteres, palavras, frases e parágrafos em tempo real.',
@@ -328,6 +346,7 @@ const TRANSLATIONS = {
             clean_title: 'Limpador de Texto', clean_desc: 'Remove linhas vazias e espaços extras dentro da lista.',
             lorem_title: 'Lorem Ipsum', lorem_desc: 'Gere texto de preenchimento para seus designs.',
             style_title: 'Removedor de Estilo', style_desc: 'Remova a formatação do texto para uma colagem limpa.',
+            compare_title: "Comparar Listas", compare_desc: "Compare facilmente dois textos diferentes instantaneamente",
             portavisa_title: 'Porta Visa', portavisa_desc: 'Contém informações abrangentes sobre os vistos de residência em Portugal.'
         }
     },
@@ -377,14 +396,18 @@ const TRANSLATIONS = {
                     <div class="bg-black text-white rounded-[40px] p-8 md:p-14 mt-12 relative overflow-hidden border border-neutral-800">
                         <div class="relative z-10 max-w-3xl">
                             <div class="font-sans text-base md:text-lg space-y-6 text-neutral-300 leading-relaxed tracking-wide">
-                                <p>Benim adım <strong>Yusuf</strong>. Hayatımı iki bavula sığdırarak yeni bir sayfa açmak için Lizbon'a taşındım ve bu proje üzerine çalışmaya başladım.</p>
+                                <p>Benim adım <strong>Yusuf</strong>. Hayatımı iki bavula sığdırıp yeni bir sayfa açmak için Lizbon'a taşındım ve Piyongo'yu inşa etmeye başladım.
+</p>
                                 
-                                <p>Bu yolculukta tek başıma sayılmazdım. 15 yıllık can dostumun desteği hem taşınırken hem Piyongo üzerine çalışırken hep yanımdaydı. Sabahlara kadar çalıştığım her an desteğini hiç esirgemedi. Ne yazık ki, bu sürecin tam ortasında onu kaybettim. Acım çok derindi ama pes etmedim.</p>
+                                <p>Bu süreç hayatımın en zor dönemiyle kesişti; en büyük destekçim olan 15 yıllık can dostumu kaybettim. Piyongo, bu derin kayba rağmen pes etmememin, ona verdiğim sözün ve hayata üreterek yeniden tutunmamın bir sembolü oldu.
+</p>
                                 
-                                <p>Onun anısına devam etme kararı aldım. Bugün Piyongo, hem ona verdiğim bir söz hem de hayata yeniden tutunma yolum. Portekiz yolculuğunuzu bir nebze kolaylaştırmak için bu rehberleri ve araçları üretiyorum. Bu proje, zorluklara karşı duruşumun bir sembolü.</p>
+                                <p>Amacım, Portekiz yolculuğunuzu ve dijital hayatınızı biraz olsun kolaylaştırmak. 
+</p>
                                 
                                 <p class="text-[#FF4F00] font-bold pt-6 text-lg md:text-xl leading-snug">
-                                    Piyongo tamamen ücretsizdir. Hikayemin bir parçası olduğunuz ve bana destek verdiğiniz için teşekkür ederim.
+                                    Piyongo tamamen ücretsizdir. Bu hikayenin bir parçası olduğunuz ve destek verdiğiniz için teşekkür ederim.
+
                                 </p>
                             </div>
                             

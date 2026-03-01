@@ -4,6 +4,330 @@
 const PORTAVISA_DB = [
 
 {
+id: 'apostille-documents-turkey',
+stage: 'discover',
+category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+source: 'Ministry of Justice / Hague Convention',
+date: '17.02.2026',
+title: { en: 'What is an Apostille?', tr: 'Apostil Nedir ve Neden Gereklidir?', pt: 'O que é uma Apostila?' },
+content: {
+en: `<p class='mb-4'>An Apostille is an international stamp that verifies a document is real. For Portuguese visa applications, all Turkish public documents (criminal record, birth certificate, marriage certificate) must be Apostilled.</p>
+
+<p class='mb-4'>In Turkey, you get this from the District Governor (Kaymakamlık) or the Governor (Valilik). Without this specific stamp, the Portuguese authorities will treat your documents as invalid paper.</p>`,
+tr: `<p class='mb-4'>Apostil, bir belgenin gerçek olduğunu doğrulayan uluslararası bir mühürdür. Portekiz vize başvuruları için tüm Türk resmi belgelerinin (adli sicil, doğum belgesi, evlilik cüzdanı) Apostilli olması gerekir.</p>
+<p class='mb-4'>Türkiye'de bunu Kaymakamlık veya Valilikten alırsınız. Bu özel mühür olmadan, Portekiz makamları belgelerinizi geçersiz kağıt parçası olarak kabul edecektir.</p>`,
+pt: `<p class='mb-4'>Uma Apostila é um selo internacional que verifica a autenticidade de um documento. Para vistos portugueses, todos os documentos públicos turcos (registo criminal, certidão de nascimento) devem ser apostilados.</p>
+<p class='mb-4'>Na Turquia, obtém-se no Governador de Distrito (Kaymakamlık). Sem este selo específico, as autoridades portuguesas tratarão os seus documentos como inválidos.</p>`
+}
+},
+{
+id: 'fiscal-representative-mandatory',
+stage: 'discover',
+category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+source: 'Tax Authority / Finanças',
+date: '17.02.2026',
+title: { en: 'Fiscal Representative for Non-EU', tr: 'AB Dışı Vatandaşlar İçin Vergi Temsilcisi', pt: 'Representante Fiscal para Não-UE' },
+content: {
+en: `<p class='mb-4'>If you reside outside the EU (like in Turkey), you legally cannot get a NIF without a Fiscal Representative (Representante Fiscal). This person must be a Portuguese resident or company.</p>
+<p class='mb-4'>They accept responsibility for receiving your tax notifications until you move to Portugal. Once you have your residency card and change your address to Portugal, you can remove the representative.</p>`,
+tr: `<p class='mb-4'>AB dışında (Türkiye gibi) ikamet ediyorsanız, yasal olarak bir Vergi Temsilcisi (Representante Fiscal) olmadan NIF alamazsınız. Bu kişi Portekiz'de yerleşik biri veya bir şirket olmalıdır.</p>
+<p class='mb-4'>Siz Portekiz'e taşınana kadar vergi bildirimlerinizi alma sorumluluğunu üstlenirler. Oturum kartınızı alıp adresinizi Portekiz'e taşıdığınızda temsilciyi kaldırabilirsiniz.</p>`,
+pt: `<p class='mb-4'>Se reside fora da UE (como na Turquia), legalmente não pode obter NIF sem um Representante Fiscal. Esta pessoa deve ser residente em Portugal ou uma empresa.</p>
+<p class='mb-4'>Eles aceitam a responsabilidade de receber as suas notificações fiscais até se mudar. Assim que tiver residência e mudar a morada para Portugal, pode remover o representante.</p>`
+}
+},
+{
+id: 'rabies-titration-test',
+stage: 'discover',
+category: { en: 'Family & Education', tr: 'Aile & Eğitim', pt: 'Família e Educação' },
+source: 'DGAV / Veterinary Authority',
+date: '17.02.2026',
+title: { en: 'Pet Titration Test (Critical)', tr: 'Kuduz Titrasyon Testi (Kritik)', pt: 'Teste de Titulação de Raiva' },
+content: {
+en: `<p class='mb-4'>Turkey is considered a "high-risk" country for rabies. To bring a cat or dog, you must do a Rabies Antibody Titration Test at an approved lab in Ankara at least <strong>3 months before travel</strong>.</p>
+<p class='mb-4'>If you wait until your visa is approved to do this test, you will be delayed. The animal cannot enter the EU until 3 months have passed from the date of the blood draw, even if the result is perfect.</p>`,
+tr: `<p class='mb-4'>Türkiye kuduz için "yüksek riskli" ülke sayılır. Kedi veya köpek getirmek için, seyahatten en az <strong>3 ay önce</strong> Ankara'daki onaylı bir laboratuvarda Kuduz Antikor Titrasyon Testi yaptırmalısınız.</p>
+<p class='mb-4'>Bu testi yapmak için vizenizin onaylanmasını beklerseniz gecikirsiniz. Sonuç mükemmel olsa bile, kan alım tarihinden itibaren 3 ay geçmeden hayvan AB'ye giremez.</p>`,
+pt: `<p class='mb-4'>A Turquia é considerada de "alto risco" para raiva. Para trazer cão ou gato, deve fazer o Teste de Titulação em laboratório aprovado em Ancara pelo menos <strong>3 meses antes da viagem</strong>.</p>
+<p class='mb-4'>Se esperar pelo visto para fazer isto, vai atrasar-se. O animal não pode entrar na UE até passarem 3 meses da recolha de sangue, mesmo com resultado perfeito.</p>`
+}
+},
+{
+id: 'driving-license-validity',
+stage: 'discover',
+category: { en: 'Daily Life', tr: 'Günlük Yaşam', pt: 'Vida Quotidiana' },
+source: 'IMT Official',
+date: '17.02.2026',
+title: { en: 'Driving with a Turkish License', tr: 'Türk Ehliyetiyle Araç Kullanmak', pt: 'Conduzir com Carta Turca' },
+content: {
+en: `<p class='mb-4'>You can drive in Portugal with your Turkish license for only <strong>185 days</strong> after obtaining residency. After this period, driving with it becomes illegal.</p>
+<p class='mb-4'>You must initiate the exchange process (Troca de Carta) at IMT within this window. Portugal and Turkey have an agreement, so you usually don't need to take a driving test if you act on time.</p>`,
+tr: `<p class='mb-4'>Oturum izni aldıktan sonra Türk ehliyetinizle Portekiz'de sadece <strong>185 gün</strong> araç kullanabilirsiniz. Bu süreden sonra kullanmak yasa dışıdır.</p>
+<p class='mb-4'>Bu süre içinde IMT'de değişim sürecini (Troca de Carta) başlatmalısınız. Portekiz ve Türkiye'nin anlaşması vardır, bu yüzden zamanında hareket ederseniz genellikle direksiyon sınavına girmeniz gerekmez.</p>`,
+pt: `<p class='mb-4'>Pode conduzir em Portugal com carta turca apenas por <strong>185 dias</strong> após obter residência. Após este período, conduzir com ela torna-se ilegal.</p>
+<p class='mb-4'>Deve iniciar a troca no IMT dentro deste prazo. Portugal e Turquia têm acordo, por isso geralmente não precisa de exame de condução se agir a tempo.</p>`
+}
+},
+{
+id: 'healthcare-sns-vs-private',
+stage: 'discover',
+category: { en: 'Healthcare', tr: 'Sağlık', pt: 'Saúde' },
+source: 'Ministry of Health',
+date: '17.02.2026',
+title: { en: 'Public (SNS) vs. Private Healthcare', tr: 'Kamu (SNS) ve Özel Sağlık', pt: 'Saúde Pública (SNS) vs. Privada' },
+content: {
+en: `<p class='mb-4'>The SNS (Serviço Nacional de Saúde) is the public system, nearly free for residents. It handles serious emergencies, surgeries, and chronic care excellently but has long wait times for non-urgent specialists.</p>
+<p class='mb-4'>Private insurance (Seguro de Saúde) is recommended for faster access to routine appointments (dermatology, ophthalmology). Most expats use a mix: Private for speed, SNS for serious issues.</p>`,
+tr: `<p class='mb-4'>SNS (Serviço Nacional de Saúde), sakinler için neredeyse ücretsiz olan kamu sistemidir. Ciddi acil durumları, ameliyatları ve kronik bakımı mükemmel yönetir ancak acil olmayan uzmanlar için bekleme süreleri uzundur.</p>
+<p class='mb-4'>Rutin randevulara (cildiye, göz) daha hızlı erişim için Özel Sigorta (Seguro de Saúde) önerilir. Çoğu gurbetçi karma kullanır: Hız için Özel, ciddi sorunlar için SNS.</p>`,
+pt: `<p class='mb-4'>O SNS é o sistema público, quase gratuito para residentes. Trata excelentemente emergências e doenças crónicas, mas tem longas esperas para especialistas não urgentes.</p>
+<p class='mb-4'>O seguro privado é recomendado para acesso rápido a consultas de rotina. A maioria dos estrangeiros usa um misto: Privado para rapidez, SNS para questões sérias.</p>`
+}
+},
+{
+id: 'rent-prices-2026',
+stage: 'discover',
+category: { en: 'Housing', tr: 'Konaklama', pt: 'Habitação' },
+source: 'Idealista Data',
+date: '17.02.2026',
+title: { en: 'Real Rent Prices in 2026', tr: '2026 Gerçek Kira Fiyatları', pt: 'Preços Reais de Renda em 2026' },
+content: {
+en: `<p class='mb-4'>Be realistic about your budget. In Lisbon, a decent 1-bedroom apartment (T1) now averages €1,200-€1,500 per month. In Porto, expect €900-€1,100.</p>
+<p class='mb-4'>To find affordable options (€600-€800), you must look at interior cities like Castelo Branco, Viseu, or Santarém. The "cheap Portugal" of 5 years ago no longer exists in the major coastal hubs.</p>`,
+tr: `<p class='mb-4'>Bütçeniz konusunda gerçekçi olun. Lizbon'da düzgün bir 1+1 daire (T1) ortalaması artık aylık 1.200€-1.500€'dur. Porto'da 900€-1.100€ bekleyin.</p>
+<p class='mb-4'>Uygun fiyatlı seçenekler (600€-800€) bulmak için Castelo Branco, Viseu veya Santarém gibi iç şehirlere bakmalısınız. 5 yıl öncesinin "ucuz Portekiz'i" artık büyük kıyı merkezlerinde mevcut değil.</p>`,
+pt: `<p class='mb-4'>Seja realista com o orçamento. Em Lisboa, um T1 decente custa agora em média 1.200€-1.500€/mês. No Porto, conte com 900€-1.100€.</p>
+<p class='mb-4'>Para opções acessíveis (600€-800€), deve procurar cidades do interior como Castelo Branco ou Viseu. O "Portugal barato" de há 5 anos já não existe no litoral.</p>`
+}
+},
+{
+id: 'aima-vs-sef-explained',
+stage: 'discover',
+category: { en: 'Visas & AIMA', tr: 'Vize & AIMA', pt: 'Vistos e AIMA' },
+source: 'Government Decree',
+date: '17.02.2026',
+title: { en: 'What is AIMA? (Goodbye SEF)', tr: 'AIMA Nedir? (Elveda SEF)', pt: 'O que é a AIMA? (Adeus SEF)' },
+content: {
+en: `<p class='mb-4'>SEF (Foreigners and Borders Service) was abolished in late 2023. Its administrative functions were taken over by <strong>AIMA</strong> (Agency for Integration, Migration, and Asylum).</p>
+<p class='mb-4'>When people say "I have a SEF appointment," they mean AIMA. The police functions of SEF were transferred to the PSP and GNR. AIMA handles your residency cards, renewals, and family reunification.</p>`,
+tr: `<p class='mb-4'>SEF (Yabancılar ve Sınır Servisi) 2023 sonunda kaldırıldı. İdari görevleri <strong>AIMA</strong> (Entegrasyon, Göç ve İltica Ajansı) tarafından devralındı.</p>
+<p class='mb-4'>İnsanlar "SEF randevum var" dediğinde AIMA'yı kastederler. SEF'in polis yetkileri PSP ve GNR'ye devredildi. AIMA oturum kartlarınızı, yenilemeleri ve aile birleşimini yönetir.</p>`,
+pt: `<p class='mb-4'>O SEF foi extinto no final de 2023. As suas funções administrativas passaram para a <strong>AIMA</strong> (Agência para a Integração, Migrações e Asilo).</p>
+<p class='mb-4'>Quando dizem "tenho consulta no SEF", referem-se à AIMA. As funções policiais passaram para a PSP e GNR. A AIMA trata dos cartões de residência e reagrupamento.</p>`
+}
+},
+{
+id: 'public-schools-language',
+stage: 'discover',
+category: { en: 'Family & Education', tr: 'Aile & Eğitim', pt: 'Família e Educação' },
+source: 'Ministry of Education',
+date: '17.02.2026',
+title: { en: 'Public Schools: Language Barrier', tr: 'Devlet Okulları: Dil Bariyeri', pt: 'Escolas Públicas: Barreira Linguística' },
+content: {
+en: `<p class='mb-4'>Public schools are free, but the curriculum is 100% in Portuguese. There are no "English public schools." For young children (under 6), immersion works well. For teenagers, it can be traumatic and lead to losing a year.</p>
+<p class='mb-4'>Schools offer "Português Língua Não Materna" support classes, but if your child is older and doesn't speak the language, you should budget for a private international school.</p>`,
+tr: `<p class='mb-4'>Devlet okulları ücretsizdir ancak müfredat %100 Portekizcedir. "İngilizce devlet okulu" yoktur. Küçük çocuklar (6 yaş altı) için daldırma yöntemi iyi çalışır. Gençler için travmatik olabilir ve yıl kaybına yol açabilir.</p>
+<p class='mb-4'>Okullar "Ana Dil Olmayan Portekizce" destek sınıfları sunar, ancak çocuğunuz büyükse ve dili konuşamıyorsa, özel uluslararası okul için bütçe ayırmalısınız.</p>`,
+pt: `<p class='mb-4'>As escolas públicas são gratuitas, mas o currículo é 100% em português. Para crianças pequenas, a imersão funciona. Para adolescentes, pode ser difícil e levar à perda de ano.</p>
+<p class='mb-4'>As escolas oferecem apoio de "Português Língua Não Materna", mas se o seu filho for mais velho, deve orçamentar para uma escola internacional privada.</p>`
+}
+},
+{
+id: 'nhr-tax-regime-2026',
+stage: 'discover',
+category: { en: 'Finance & Tax', tr: 'Finans & Vergi', pt: 'Finanças e Impostos' },
+source: 'Tax Authority / Finanças',
+date: '17.02.2026',
+title: { en: 'Is the NHR Tax Regime Gone?', tr: 'NHR Vergi Rejimi Bitti mi?', pt: 'O Regime RNH Acabou?' },
+content: {
+en: `<p class='mb-4'>The classic NHR (Non-Habitual Resident) regime, which offered 0% tax on pensions, was closed to new applicants in 2024. It has been replaced by a much stricter version (IFICI) focused on scientific and innovation careers.</p>
+<p class='mb-4'>Standard retirees or remote workers usually no longer qualify for special tax breaks unless they fall into very specific transition rules. Assume you will pay standard progressive tax rates unless told otherwise by a specialist.</p>`,
+tr: `<p class='mb-4'>Emekli maaşlarında %0 vergi sunan klasik NHR rejimi, 2024'te yeni başvurulara kapatıldı. Yerine bilimsel ve inovasyon kariyerlerine odaklanan çok daha katı bir versiyon (IFICI) geldi.</p>
+<p class='mb-4'>Standart emekliler veya uzaktan çalışanlar, çok özel geçiş kurallarına girmedikçe artık özel vergi indirimlerine hak kazanmazlar. Bir uzman aksi söylemedikçe standart artan oranlı vergi ödeyeceğinizi varsayın.</p>`,
+pt: `<p class='mb-4'>O clássico RNH, que oferecia 0% em pensões, fechou a novos pedidos em 2024. Foi substituído por uma versão mais estrita (IFICI) focada em carreiras científicas.</p>
+<p class='mb-4'>Reformados ou trabalhadores remotos padrão geralmente já não se qualificam, a menos que entrem em regras de transição. Assuma que pagará taxas normais a menos que um especialista diga o contrário.</p>`
+}
+},
+{
+id: 'vfs-appointment-struggle',
+stage: 'discover',
+category: { en: 'Visas & AIMA', tr: 'Vize & AIMA', pt: 'Vistos e AIMA' },
+source: 'Community Insights',
+date: '17.02.2026',
+title: { en: 'The VFS Appointment Struggle', tr: 'VFS Randevu Mücadelesi', pt: 'A Luta pelo Agendamento VFS' },
+content: {
+en: `<p class='mb-4'>Getting a visa appointment at VFS Global in Turkey is currently the hardest part of the process. Slots are released randomly and disappear in minutes. There is no "waiting list."</p>
+<p class='mb-4'>You must check the website multiple times a day. Do not trust "agents" selling slots for exorbitant prices, as VFS checks ID at the door. Persistence is key; it often takes 4-6 weeks just to catch a slot.</p>`,
+tr: `<p class='mb-4'>Türkiye'deki VFS Global'den vize randevusu almak şu anda sürecin en zor kısmıdır. Yerler rastgele açılır ve dakikalar içinde tükenir. "Bekleme listesi" yoktur.</p>
+<p class='mb-4'>Web sitesini günde birçok kez kontrol etmelisiniz. Fahiş fiyatlara randevu satan "aracılara" güvenmeyin, VFS kapıda kimlik kontrolü yapar. Israrcı olmak anahtardır; yer yakalamak genellikle 4-6 hafta sürer.</p>`,
+pt: `<p class='mb-4'>Conseguir agendamento na VFS na Turquia é a parte mais difícil. As vagas abrem aleatoriamente e desaparecem em minutos. Não há lista de espera.</p>
+<p class='mb-4'>Deve verificar o site várias vezes ao dia. Não confie em "agentes" a vender vagas, pois a VFS verifica a identidade. A persistência é chave; muitas vezes demora semanas a apanhar vaga.</p>`
+}
+},
+
+{
+id: 'd7-visa-passive-income',
+stage: 'discover',
+category: { en: 'Visa Types', tr: 'Vize Türleri', pt: 'Tipos de Visto' },
+source: 'Ministry of Foreign Affairs',
+date: '17.02.2026',
+title: { en: 'The D7 Passive Income Visa', tr: 'D7 Pasif Gelir Vizesi', pt: 'O Visto D7 de Rendimento Passivo' },
+content: {
+en: `<p class='mb-4'>The D7 visa is designed for retirees or individuals with stable, passive income (pensions, real estate rentals, dividends). It does not require you to have a job in Portugal, but you must prove you can support yourself.</p>
+
+<p class='mb-4'>To qualify, your passive income must meet the minimum requirement (based on the 2025/2026 minimum wage of approx. €920/month). You must provide 6 months of bank statements proving this regular inflow.</p>`,
+tr: `<p class='mb-4'>D7 vizesi, emekliler veya düzenli pasif geliri (emekli maaşı, kira, temettü) olan bireyler için tasarlanmıştır. Portekiz'de bir işiniz olmasını gerektirmez, ancak kendinizi geçindirebileceğinizi kanıtlamalısınız.</p>
+<p class='mb-4'>Hak kazanmak için pasif geliriniz asgari şartı (2025/2026 asgari ücreti olan yaklaşık 920€/ay baz alınarak) karşılamalıdır. Bu düzenli akışı kanıtlayan 6 aylık banka dökümlerini sunmalısınız.</p>`,
+pt: `<p class='mb-4'>O visto D7 destina-se a reformados ou indivíduos com rendimentos passivos estáveis (pensões, rendas, dividendos). Não exige emprego em Portugal, mas deve provar que se consegue sustentar.</p>
+<p class='mb-4'>Para se qualificar, o rendimento passivo deve cumprir o requisito mínimo (baseado no salário mínimo de 2025/2026 de aprox. 920€/mês). Deve apresentar extratos bancários de 6 meses a provar este fluxo.</p>`
+}
+},
+{
+id: 'd8-digital-nomad-requirements',
+stage: 'discover',
+category: { en: 'Visa Types', tr: 'Vize Türleri', pt: 'Tipos de Visto' },
+source: 'AIMA Official',
+date: '17.02.2026',
+title: { en: 'D8 Digital Nomad Visa Basics', tr: 'D8 Dijital Göçebe Vizesi Temelleri', pt: 'Básico do Visto D8 Nómada Digital' },
+content: {
+en: `<p class='mb-4'>The D8 visa is for remote workers and freelancers employed by companies <strong>outside</strong> Portugal. You must present a work contract or service agreement that explicitly states you can work remotely.</p>
+<p class='mb-4'>The financial threshold is higher than the D7. You must prove an average monthly income of at least 4 times the Portuguese minimum wage (approx. €3,480 in 2026) over the last 3 months.</p>`,
+tr: `<p class='mb-4'>D8 vizesi, Portekiz <strong>dışındaki</strong> şirketler tarafından istihdam edilen uzaktan çalışanlar ve freelancerlar içindir. Uzaktan çalışabileceğinizi açıkça belirten bir iş sözleşmesi veya hizmet anlaşması sunmalısınız.</p>
+<p class='mb-4'>Finansal eşik D7'den daha yüksektir. Son 3 ayda, Portekiz asgari ücretinin en az 4 katı (2026'da yaklaşık 3.680€) ortalama aylık geliriniz olduğunu kanıtlamalısınız.</p>`,
+pt: `<p class='mb-4'>O visto D8 é para trabalhadores remotos e freelancers empregados por empresas <strong>fora</strong> de Portugal. Deve apresentar contrato de trabalho ou prestação de serviços que declare explicitamente o trabalho remoto.</p>
+<p class='mb-4'>O limiar financeiro é superior ao D7. Deve provar um rendimento mensal médio de pelo menos 4 vezes o salário mínimo português (aprox. 3.680€ em 2026) nos últimos 3 meses.</p>`
+}
+},
+{
+id: 'applying-visa-ankara',
+stage: 'discover',
+category: { en: 'Visas & AIMA', tr: 'Vize & AIMA', pt: 'Vistos e AIMA' },
+source: ' / Embassy of Portugal',
+date: '17.02.2026',
+title: { en: 'Applying from Turkey (Ankara)', tr: 'Türkiye\'den Başvuru (Ankara)', pt: 'Candidatar-se da Turquia (Ancara)' },
+content: {
+en: `<p class='mb-4'>Visa applications in Turkey are processed through the Portuguese Embassy in Ankara, often facilitated by . You must book an appointment well in advance, as slots can be booked out for months.</p>
+<p class='mb-4'>Prepare your file meticulously. The Embassy requires physical copies of all documents. While you can email <em>sconsular.ankara@mne.pt</em> for inquiries, the actual submission is in person. Missing a single document usually means rejection.</p>`,
+tr: `<p class='mb-4'>Türkiye'deki vize başvuruları,  Ankara'daki Portekiz Büyükelçiliği üzerinden işlenir. Randevular aylar öncesinden dolabildiği için çok önceden yer ayırtmalısınız.</p>
+<p class='mb-4'>Dosyanızı titizlikle hazırlayın. Büyükelçilik tüm belgelerin fiziksel kopyalarını ister. Sorular için <em>sconsular.ankara@mne.pt</em> adresine e-posta atabilseniz de, teslimat şahsen yapılır. Tek bir belgenin eksik olması genellikle ret anlamına gelir.</p>`,
+pt: `<p class='mb-4'>Os pedidos de visto na Turquia são processados pela Embaixada de Portugal em Ancara, muitas vezes via . Deve agendar com antecedência, pois as vagas esgotam meses antes.</p>
+<p class='mb-4'>Prepare o processo meticulosamente. A Embaixada exige cópias físicas de tudo. Embora possa enviar e-mail para <em>sconsular.ankara@mne.pt</em>, a entrega é presencial. A falta de um documento significa geralmente rejeição.</p>`
+}
+},
+{
+id: 'nif-first-step',
+stage: 'discover',
+category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+source: 'Tax Authority / Finanças',
+date: '17.02.2026',
+title: { en: 'NIF: The First Document You Need', tr: 'NIF: İhtiyacınız Olan İlk Belge', pt: 'NIF: O Primeiro Documento Necessário' },
+content: {
+en: `<p class='mb-4'>The NIF (Número de Identificação Fiscal) is your tax ID. You cannot open a bank account, rent an apartment, or sign up for internet without it. It is the absolute foundation of your move.</p>
+<p class='mb-4'>You can obtain one remotely through a fiscal representative (lawyer or company) before you arrive. Do not wait until your visa appointment to sort this out; have it ready early.</p>`,
+tr: `<p class='mb-4'>NIF (Número de Identificação Fiscal) vergi kimlik numaranızdır. O olmadan banka hesabı açamaz, ev kiralayamaz veya internet bağlatamazsınız. Taşınmanızın mutlak temelidir.</p>
+<p class='mb-4'>Gelmeden önce bir vergi temsilcisi (avukat veya şirket) aracılığıyla uzaktan alabilirsiniz. Bunu halletmek için vize randevunuzu beklemeyin; erkenden hazır edin.</p>`,
+pt: `<p class='mb-4'>O NIF é o seu número de contribuinte. Não pode abrir conta, alugar casa ou ter internet sem ele. É a base absoluta da sua mudança.</p>
+<p class='mb-4'>Pode obtê-lo remotamente através de um representante fiscal (advogado ou empresa) antes de chegar. Não espere pelo agendamento do visto; trate disso cedo.</p>`
+}
+},
+{
+id: 'bank-account-proof-funds',
+stage: 'discover',
+category: { en: 'Finance & Tax', tr: 'Finans & Vergi', pt: 'Finanças e Impostos' },
+source: 'Consulate Guidelines',
+date: '17.02.2026',
+title: { en: 'Bank Account & Proof of Funds', tr: 'Banka Hesabı ve Fon Kanıtı', pt: 'Conta Bancária e Prova de Fundos' },
+content: {
+en: `<p class='mb-4'>To approve your visa, the consulate requires proof that you have enough savings to survive for a year. You must open a Portuguese bank account and deposit the minimum required amount (approx. €10,500 for a single person).</p>
+<p class='mb-4'>While some consulates accept statements from foreign banks (like Revolut), a Portuguese IBAN is strongly preferred and often mandatory. This proves your commitment to moving capital to the country.</p>`,
+tr: `<p class='mb-4'>Vizenizi onaylamak için konsolosluk, bir yıl boyunca geçinecek kadar birikiminiz olduğunu kanıtlamanızı ister. Bir Portekiz banka hesabı açmalı ve gereken asgari tutarı (tek kişi için yaklaşık 12.880€) yatırmalısınız.</p>
+<p class='mb-4'>Bazı konsolosluklar yabancı banka (Revolut gibi) dökümlerini kabul etse de, Portekiz IBAN'ı şiddetle tercih edilir ve genellikle zorunludur. Bu, sermayeyi ülkeye taşıma taahhüdünüzü kanıtlar.</p>`,
+pt: `<p class='mb-4'>Para aprovar o visto, o consulado exige prova de poupanças para um ano. Deve abrir conta em Portugal e depositar o montante mínimo (aprox. 12.880€ para uma pessoa).</p>
+<p class='mb-4'>Embora alguns consulados aceitem bancos estrangeiros (como Revolut), um IBAN português é preferido e muitas vezes obrigatório. Prova o compromisso de transferir capital para o país.</p>`
+}
+},
+{
+id: 'accommodation-proof-visa',
+stage: 'discover',
+category: { en: 'Housing', tr: 'Konaklama', pt: 'Habitação' },
+source: ' / Consulate',
+date: '17.02.2026',
+title: { en: 'Proof of Accommodation for Visa', tr: 'Vize İçin Konaklama Kanıtı', pt: 'Prova de Alojamento para Visto' },
+content: {
+en: `<p class='mb-4'>You must prove where you will live in Portugal. The most secure option is a 12-month registered rental contract. Short-term Airbnb bookings or hotel reservations are frequently rejected by the Ankara consulate.</p>
+<p class='mb-4'>Alternatively, a "Termo de Responsabilidade" (invitation letter) from a Portuguese resident hosting you can work, but it must be notarized and accompanied by their ID and proof of housing ownership.</p>`,
+tr: `<p class='mb-4'>Portekiz'de nerede yaşayacağınızı kanıtlamalısınız. En güvenli seçenek 12 aylık kayıtlı kira sözleşmesidir. Kısa vadeli Airbnb veya otel rezervasyonları Ankara konsolosluğu tarafından sıklıkla reddedilir.</p>
+<p class='mb-4'>Alternatif olarak, sizi misafir eden bir Portekiz sakininden alınan "Termo de Responsabilidade" (davet mektubu) işe yarayabilir, ancak noter tasdikli olmalı ve kişinin kimliği ile konut sahipliği kanıtı eklenmelidir.</p>`,
+pt: `<p class='mb-4'>Deve provar onde vai viver. A opção mais segura é um contrato de arrendamento de 12 meses. Reservas de Airbnb ou hotel são frequentemente rejeitadas pelo consulado em Ancara.</p>
+<p class='mb-4'>Alternativamente, um "Termo de Responsabilidade" de um residente pode funcionar, mas deve ser reconhecido notarialmente e acompanhado do CC e prova de habitação.</p>`
+}
+},
+{
+id: 'criminal-record-turkey',
+stage: 'discover',
+category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+source: 'Ministry of Justice',
+date: '17.02.2026',
+title: { en: 'Criminal Record: Wet Signature', tr: 'Adli Sicil Kaydı: Islak İmza', pt: 'Registo Criminal: Assinatura Manual' },
+content: {
+en: `<p class='mb-4'>You need a clean criminal record from Turkey (Adli Sicil Kaydı). While e-Government (e-Devlet) offers a digital version with a barcode, the Portuguese Embassy often rejects this.</p>
+<p class='mb-4'>You should go to the Courthouse (Adliye) to get a physical document with a wet signature and stamp. Then, get it Apostilled by the District Governor (Kaymakamlık) and translated by a sworn translator.</p>`,
+tr: `<p class='mb-4'>Türkiye'den temiz bir Adli Sicil Kaydı almanız gerekir. e-Devlet barkodlu dijital bir versiyon sunsa da, Portekiz Büyükelçiliği bunu sıklıkla reddeder.</p>
+<p class='mb-4'>Adliyeye gidip ıslak imzalı ve mühürlü fiziksel bir belge almalısınız. Ardından Kaymakamlıkta Apostil yaptırmalı ve yeminli tercümana çevirtmelisiniz.</p>`,
+pt: `<p class='mb-4'>Precisa de registo criminal limpo da Turquia. Embora o e-Devlet ofereça versão digital, a Embaixada Portuguesa rejeita-a frequentemente.</p>
+<p class='mb-4'>Deve ir ao Tribunal (Adliye) obter um documento físico com assinatura e carimbo. Depois, deve ser Apostilado (Kaymakamlık) e traduzido por tradutor ajuramentado.</p>`
+}
+},
+{
+id: 'travel-insurance-visa',
+stage: 'discover',
+category: { en: 'Healthcare', tr: 'Sağlık', pt: 'Saúde' },
+source: 'Schengen Visa Code',
+date: '17.02.2026',
+title: { en: 'Travel Insurance Requirements', tr: 'Seyahat Sigortası Gereksinimleri', pt: 'Requisitos de Seguro de Viagem' },
+content: {
+en: `<p class='mb-4'>For the initial D-type visa application, you need Travel Health Insurance. It must cover at least €30,000 in medical expenses, including repatriation, and be valid for the entire duration of the visa (usually 120 days).</p>
+<p class='mb-4'>The policy must be valid for all Schengen countries. Once you arrive in Portugal and get your residency card, you will switch to the public SNS system or private local insurance.</p>`,
+tr: `<p class='mb-4'>İlk D tipi vize başvurusu için Seyahat Sağlık Sigortasına ihtiyacınız vardır. Ülkeye dönüş dahil en az 30.000€ tıbbi masrafı kapsamalı ve vize süresi boyunca (genellikle 120 gün) geçerli olmalıdır.</p>
+<p class='mb-4'>Poliçe tüm Schengen ülkeleri için geçerli olmalıdır. Portekiz'e varıp oturum kartınızı aldığınızda, kamu SNS sistemine veya yerel özel sigortaya geçersiniz.</p>`,
+pt: `<p class='mb-4'>Para o visto D inicial, precisa de Seguro de Viagem. Deve cobrir 30.000€ em despesas médicas, incluindo repatriamento, e ser válido por toda a duração do visto (120 dias).</p>
+<p class='mb-4'>A apólice deve ser válida para todo o espaço Schengen. Ao chegar a Portugal e obter residência, mudará para o SNS ou seguro privado local.</p>`
+}
+},
+{
+id: 'financial-means-calculation',
+stage: 'discover',
+category: { en: 'Finance & Tax', tr: 'Finans & Vergi', pt: 'Finanças e Impostos' },
+source: 'AIMA Guidelines',
+date: '17.02.2026',
+title: { en: 'Calculating Minimum Financial Means', tr: 'Asgari Finansal Yeterlilik Hesaplaması', pt: 'Cálculo de Meios Financeiros' },
+content: {
+en: `<p class='mb-4'>To bring your family, you must show additional funds. The main applicant needs 100% of the minimum wage. A spouse or partner adds 50%. Each child adds 30%.</p>
+<p class='mb-4'>For a family of three (Couple + 1 Child) in 2026, assuming a base of €920: Main (€920) + Spouse (€435) + Child (€261) = €1,566 per month. You need 12 months of this total amount in your bank account.</p>`,
+tr: `<p class='mb-4'>Ailenizi getirmek için ek fon göstermelisiniz. Ana başvuru sahibi asgari ücretin %100'üne ihtiyaç duyar. Eş veya partner %50 ekler. Her çocuk %30 ekler.</p>
+<p class='mb-4'>2026'da üç kişilik bir aile (Çift + 1 Çocuk) için, 920€ baz alındığında: Ana (€920) + Eş (€435) + Çocuk (€261) = Aylık 1.566€. Banka hesabınızda bu toplam tutarın 12 aylık karşılığı bulunmalıdır.</p>`,
+pt: `<p class='mb-4'>Para trazer a família, deve mostrar fundos adicionais. O requerente principal precisa de 100% do salário mínimo. Cônjuge adiciona 50%. Cada filho 30%.</p>
+<p class='mb-4'>Para família de três (Casal + 1 Filho) em 2026, base 920€: Principal (920€) + Cônjuge (435€) + Filho (261€) = 1.566€/mês. Precisa de 12 meses deste total na conta.</p>`
+}
+},
+{
+id: 'd6-family-reunification',
+stage: 'discover',
+category: { en: 'Visas & AIMA', tr: 'Vize & AIMA', pt: 'Vistos e AIMA' },
+source: 'AIMA Official',
+date: '17.02.2026',
+title: { en: 'D6 Visa: Family Reunification', tr: 'D6 Vizesi: Aile Birleşimi', pt: 'Visto D6: Reagrupamento Familiar' },
+content: {
+en: `<p class='mb-4'>The D6 visa allows family members of a legal resident to join them in Portugal. This covers spouses, minor children, and dependent parents (over 65). It is not for extended family like siblings or cousins.</p>
+<p class='mb-4'>The main resident must prove they have suitable housing and sufficient income to support the family. Note that getting an appointment for family members is currently one of the slowest processes in the AIMA system.</p>`,
+tr: `<p class='mb-4'>D6 vizesi, yasal bir sakinin aile üyelerinin Portekiz'de onlara katılmasına izin verir. Bu, eşleri, reşit olmayan çocukları ve bağımlı ebeveynleri (65 yaş üstü) kapsar. Kardeş veya kuzen gibi geniş aile için değildir.</p>
+<p class='mb-4'>Ana sakin, aileyi geçindirmek için uygun konuta ve yeterli gelire sahip olduğunu kanıtlamalıdır. Aile üyeleri için randevu almanın şu anda AIMA sistemindeki en yavaş süreçlerden biri olduğunu unutmayın.</p>`,
+pt: `<p class='mb-4'>O visto D6 permite que familiares de um residente legal se juntem a ele. Cobre cônjuges, filhos menores e pais dependentes (+65). Não é para irmãos ou primos.</p>
+<p class='mb-4'>O residente deve provar habitação adequada e rendimento suficiente. Note que conseguir agendamento para familiares é atualmente um dos processos mais lentos na AIMA.</p>`
+}
+},
+
+{
 id: 'easytoll-foreign-plates',
 stage: 'discover',
 category: { en: 'Daily Life', tr: 'Günlük Yaşam', pt: 'Vida Quotidiana' },
