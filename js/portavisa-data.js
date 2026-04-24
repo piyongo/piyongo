@@ -4,6 +4,178 @@
 const PORTAVISA_DB = [
 
 {
+  id: 'renting-house-portugal',
+  stage: 'prepare',
+  category: { en: 'Housing', tr: 'Konaklama', pt: 'Habitação' },
+  source: 'Local Experience / Idealista',
+  date: '24.04.2026',
+  title: { en: 'Renting a House in Lisbon', tr: 'Lizbon\'da Ev Kiralamak', pt: 'Alugar casa em Lisboa' },
+  content: {
+    en: `<p class='mb-4'>The rental market in Lisbon is competitive. You will mainly use **Idealista** and **Imovirtual**. Be ready to act fast.</p>
+    <p class='mb-4'><strong>Pro Tip:</strong> Most landlords ask for a Portuguese guarantor (Fiador). If you don't have one, offering 3-6 months of rent in advance usually solves the problem. Always ask for a formal "Contrato de Arrendamento" for residency purposes.</p>`,
+    tr: `<p class='mb-4'>Lizbon'da kiralık ev piyasası oldukça rekabetçidir. Temel olarak **Idealista** ve **Imovirtual** sitelerini kullanacaksınız. Hızlı hareket etmeye hazır olun.</p>
+    <p class='mb-4'><strong>İpucu:</strong> Ev sahiplerinin çoğu Portekizli bir kefil (Fiador) ister. Eğer kefiliniz yoksa, 3-6 aylık kirayı peşin ödemeyi teklif etmek genellikle sorunu çözer. Oturum başvurusu için mutlaka resmi "Contrato de Arrendamento" (Kira Sözleşmesi) talep edin.</p>`,
+    pt: `<p class='mb-4'>O mercado de arrendamento em Lisboa é competitivo. Usará principalmente o **Idealista** e o **Imovirtual**. Esteja pronto para agir rápido.</p>
+    <p class='mb-4'><strong>Dica:</strong> A maioria dos senhorios pede um Fiador português. Se não tiver um, oferecer 3-6 meses de renda antecipada costuma resolver o problema. Peça sempre um Contrato de Arrendamento formal.</p>`
+  }
+},
+
+{
+  id: 'health-system-sns',
+  stage: 'residency',
+  category: { en: 'Health', tr: 'Sağlık', pt: 'Saúde' },
+  source: 'SNS Official / Centro de Saúde',
+  date: '24.04.2026',
+  title: { en: 'Accessing Public Healthcare (SNS)', tr: 'Kamu Sağlık Sistemine Erişim (SNS)', pt: 'Acesso à Saúde Pública (SNS)' },
+  content: {
+    en: `<p class='mb-4'>To use public hospitals, you need a **Número de Utente**. You get this by registering at your local "Centro de Saúde" with your residency permit and NIF.</p>
+    <p class='mb-4'>Public healthcare is excellent but can have long wait times for non-emergencies. Many expats prefer having a private insurance (like Médis or Multicare) for faster specialist access.</p>`,
+    tr: `<p class='mb-4'>Kamu hastanelerini kullanmak için bir **Número de Utente** (Hasta Numarası) almanız gerekir. Bunun için oturum izniniz ve NIF numaranızla bölgenizdeki "Centro de Saúde"ye kayıt olmalısınız.</p>
+    <p class='mb-4'>Kamu sağlığı mükemmeldir ancak acil olmayan durumlar için bekleme süreleri uzun olabilir. Çoğu expat, uzman doktora hızlı erişim için özel sigorta (Médis veya Multicare gibi) tercih eder.</p>`,
+    pt: `<p class='mb-4'>Para usar hospitais públicos, precisa de um **Número de Utente**. Obtém isto registando-se no seu Centro de Saúde local com a sua autorização de residência.</p>
+    <p class='mb-4'>A saúde pública é excelente, mas pode ter tempos de espera longos. Muitos estrangeiros preferem ter um seguro privado (como Médis ou Multicare).</p>`
+  }
+},
+
+{
+  id: 'getting-niss-number',
+  stage: 'residency',
+  category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+  source: 'Segurança Social',
+  date: '24.04.2026',
+  title: { en: 'What is NISS and Why You Need It?', tr: 'NISS Nedir ve Neden Gereklidir?', pt: 'O que é o NISS e por que precisa dele?' },
+  content: {
+    en: `<p class='mb-4'>NISS (Número de Identificação da Segurança Social) is your social security number. It is mandatory if you plan to work or pay social security as a freelancer.</p>
+    <p class='mb-4'>You can apply for it online through the **Segurança Social Direta** portal. It is usually processed within a few weeks and sent to your registered address.</p>`,
+    tr: `<p class='mb-4'>NISS (Sosyal Güvenlik Numarası), Portekiz'deki sosyal güvenlik numaranızdır. Çalışmayı veya freelancer olarak sosyal güvenlik primi ödemeyi planlıyorsanız zorunludur.</p>
+    <p class='mb-4'>**Segurança Social Direta** portalı üzerinden online olarak başvurabilirsiniz. Genellikle birkaç hafta içinde işleme alınır ve kayıtlı adresinize gönderilir.</p>`,
+    pt: `<p class='mb-4'>O NISS é o seu número de identificação da segurança social. É obrigatório se planeia trabalhar ou pagar segurança social como freelancer.</p>
+    <p class='mb-4'>Pode pedir online através do portal **Segurança Social Direta**. Geralmente é processado em poucas semanas e enviado para a sua morada.</p>`
+  }
+},
+
+{
+  id: 'driving-license-exchange',
+  stage: 'residency',
+  category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+  source: 'IMT Official',
+  date: '24.04.2026',
+  title: { en: 'Exchanging Your Driving License', tr: 'Ehliyet Değişimi Süreci', pt: 'Troca de carta de condução' },
+  content: {
+    en: `<p class='mb-4'>You have 90 days after getting your residency card to start the exchange process with **IMT**. For many countries, you can keep driving, but you must register your intent.</p>
+    <p class='mb-4'>The process requires a medical certificate (Atestado Médico) which you can easily get from a private doctor or your Centro de Saúde for a small fee.</p>`,
+    tr: `<p class='mb-4'>Oturum kartınızı aldıktan sonra ehliyet değişim sürecini **IMT** üzerinden başlatmak için 90 gününüz vardır. Birçok ülke için sınavsız değişim hakkı bulunur ancak niyetinizi sisteme kaydetmeniz şarttır.</p>
+    <p class='mb-4'>Süreç için bir sağlık raporu (Atestado Médico) gereklidir; bunu özel bir doktordan veya Centro de Saúde'den küçük bir ücret karşılığında kolayca alabilirsiniz.</p>`,
+    pt: `<p class='mb-4'>Tem 90 dias após obter o cartão de residência para iniciar o processo de troca no **IMT**. Para muitos países, pode continuar a conduzir, mas deve registar-se.</p>
+    <p class='mb-4'>O processo requer um Atestado Médico, que pode obter facilmente num médico privado ou no seu Centro de Saúde por uma pequena taxa.</p>`
+  }
+},
+
+{
+  id: 'cost-of-living-lisbon',
+  stage: 'discover',
+  category: { en: 'Finance', tr: 'Finans', pt: 'Finanças' },
+  source: 'Local Experience',
+  date: '24.04.2026',
+  title: { en: 'Daily Cost of Living in Lisbon', tr: 'Lizbon\'da Günlük Yaşam Maliyeti', pt: 'Custo de vida em Lisboa' },
+  content: {
+    en: `<p class='mb-4'>Lisbon is affordable compared to London or Paris, but rent has increased. A single person can live comfortably with €1200-1500 (excluding high-end luxury).</p>
+    <p class='mb-4'><strong>Savings Tip:</strong> Shop at Pingo Doce or Continente for groceries. Use the "Navegante" card for unlimited public transport (Metro, Bus, Train) for just €30-40 per month.</p>`,
+    tr: `<p class='mb-4'>Lizbon; Londra veya Paris'e kıyasla uygundur ancak kiralar artmıştır. Tek bir kişi 1200-1500€ ile (lüks harcamalar hariç) rahatça yaşayabilir.</p>
+    <p class='mb-4'><strong>Tasarruf İpucu:</strong> Market alışverişi için Pingo Doce veya Continente'yi tercih edin. Aylık sadece 30-40€ karşılığında sınırsız toplu taşıma (Metro, Otobüs, Tren) için "Navegante" kartı kullanın.</p>`,
+    pt: `<p class='mb-4'>Lisboa é acessível comparada com Londres ou Paris, mas as rendas subiram. Uma pessoa pode viver bem com 1200-1500€ (excluindo luxos).</p>
+    <p class='mb-4'><strong>Dica:</strong> Faça compras no Pingo Doce ou Continente. Use o passe "Navegante" para transporte ilimitado por apenas 30-40€ por mês.</p>`
+  }
+},
+
+{
+  id: 'learning-portuguese-resources',
+  stage: 'discover',
+  category: { en: 'Culture', tr: 'Kültür', pt: 'Cultura' },
+  source: 'IEFP / Language Schools',
+  date: '24.04.2026',
+  title: { en: 'Free Resources to Learn Portuguese', tr: 'Ücretsiz Portekizce Öğrenme Kaynakları', pt: 'Recursos gratuitos para aprender Português' },
+  content: {
+    en: `<p class='mb-4'>The government offers free classes through the **Português Para Todos (PPT)** program. You can apply at public schools or IEFP centers.</p>
+    <p class='mb-4'>For daily practice, apps like **Practice Portuguese** (European focus) are better than Duolingo (Brazilian focus). Locals appreciate even a simple "Bom dia" or "Obrigado".</p>`,
+    tr: `<p class='mb-4'>Devlet, **Português Para Todos (PPT)** programı aracılığıyla ücretsiz kurslar sunar. Devlet okullarına veya IEFP merkezlerine başvurabilirsiniz.</p>
+    <p class='mb-4'>Günlük pratik için **Practice Portuguese** (Avrupa odaklı) gibi uygulamalar, Duolingo'dan (Brezilya odaklı) çok daha iyidir. Yerel halk, basit bir "Bom dia" veya "Obrigado" demenizden bile çok memnun olur.</p>`,
+    pt: `<p class='mb-4'>O governo oferece aulas gratuitas através do programa **Português Para Todos (PPT)**. Pode inscrever-se em escolas públicas ou centros do IEFP.</p>
+    <p class='mb-4'>Para a prática diária, apps como o **Practice Portuguese** são melhores que o Duolingo. Os locais apreciam muito ouvir um simples "Bom dia" ou "Obrigado".</p>`
+  }
+},
+
+{
+  id: 'lisbon-neighborhoods-guide',
+  stage: 'discover',
+  category: { en: 'Housing', tr: 'Konaklama', pt: 'Habitação' },
+  source: 'Local Experience',
+  date: '24.04.2026',
+  title: { en: 'Where to Live in Lisbon?', tr: 'Lizbon\'da Nerede Yaşanır?', pt: 'Onde morar em Lisboa?' },
+  content: {
+    en: `<p class='mb-4'>Every neighborhood has a vibe. **Arroios** is multicultural and vibrant, **Graça** is historic with amazing views, and **Parque das Nações** is modern and family-friendly.</p>
+    <p class='mb-4'>Avoid the very center (Baixa/Chiado) for long-term living due to noise and high prices. Look into **Avenidas Novas** for a more professional, calm environment with great connections.</p>`,
+    tr: `<p class='mb-4'>Her mahallenin kendine has bir ruhu vardır. **Arroios** çok kültürlü ve canlı, **Graça** tarihi ve harika manzaralı, **Parque das Nações** ise modern ve aile dostudur.</p>
+    <p class='mb-4'>Gürültü ve yüksek fiyatlar nedeniyle uzun süreli konaklama için tam merkezden (Baixa/Chiado) kaçının. Daha profesyonel, sakin ve ulaşımı kolay bir ortam için **Avenidas Novas** bölgesine göz atın.</p>`,
+    pt: `<p class='mb-4'>Cada bairro tem a sua "vibe". **Arroios** é multicultural, a **Graça** é histórica com vistas incríveis e o **Parque das Nações** é moderno e familiar.</p>
+    <p class='mb-4'>Evite o centro (Baixa/Chiado) para morar a longo prazo devido ao barulho. Procure nas **Avenidas Novas** por um ambiente mais calmo e profissional.</p>`
+  }
+},
+
+{
+  id: 'aima-appointment-guide',
+  stage: 'residency',
+  category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+  source: 'AIMA Official / Field Notes',
+  date: '24.04.2026',
+  title: { en: 'How to Get an AIMA Appointment?', tr: 'AIMA Randevusu Nasıl Alınır?', pt: 'Como obter um agendamento na AIMA?' },
+  content: {
+    en: `<p class='mb-4'>AIMA (formerly SEF) is where you get your residency card. Currently, getting an appointment is the "final boss" of the process.</p>
+    <p class='mb-4'><strong>Pro Tip:</strong> Most appointments are opened in batches. Check the portal every Tuesday and Thursday morning. Also, calling the AIMA line at 8:00 AM sharp is often more effective than the web portal.</p>`,
+    tr: `<p class='mb-4'>AIMA (eski adıyla SEF), oturum kartınızı aldığınız kurumdur. Şu anki sistemde randevu alabilmek, bu sürecin en zorlu kısmıdır.</p>
+    <p class='mb-4'><strong>İpucu:</strong> Randevular genellikle toplu olarak açılır. Her Salı ve Perşembe sabahı portalı kontrol edin. Ayrıca, sabah tam 08:00'de AIMA hattını aramak, web portalından çok daha etkili bir yöntemdir.</p>`,
+    pt: `<p class='mb-4'>AIMA (antigo SEF) é onde obtém o seu cartão de residência. Atualmente, conseguir um agendamento é o maior desafio do processo.</p>
+    <p class='mb-4'><strong>Dica:</strong> A maioria dos agendamentos é aberta em lotes. Verifique o portal todas as terças e quintas-feiras de manhã. Ligar para a linha da AIMA às 08:00 em ponto é muitas vezes mais eficaz.</p>`
+  }
+},
+
+{
+  id: 'getting-nif-portugal',
+  stage: 'discover',
+  category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
+  source: 'Finanças (Tax Authority)',
+  date: '24.04.2026',
+  title: { en: 'NIF: Your First Step in Portugal', tr: 'NIF: Portekiz\'deki İlk Adımınız', pt: 'NIF: O seu primeiro passo em Portugal' },
+  content: {
+    en: `<p class='mb-4'>The NIF (Número de Identificação Fiscal) is your tax ID. You cannot rent a house, get a SIM card, or open a bank account without it.</p>
+    <p class='mb-4'>If you are outside the EU, you usually need a **Fiscal Representative**. In Lisbon, you can get it at a "Loja do Cidadão", but some branches are much faster than others (like Marvila).</p>`,
+    tr: `<p class='mb-4'>NIF (Vergi Kimlik Numarası), Portekiz'deki anahtarınızdır. Bu numara olmadan ev kiralayamaz, SIM kart alamaz veya banka hesabı açamazsınız.</p>
+    <p class='mb-4'>AB dışından başvuruyorsanız genellikle bir **Mali Temsilci (Fiscal Representative)** gerekir. Lizbon'da "Loja do Cidadão" merkezlerinden alınabilir, ancak Marvila gibi bazı şubeler diğerlerinden çok daha hızlı çalışır.</p>`,
+    pt: `<p class='mb-4'>O NIF é o seu número de identificação fiscal. Não pode alugar casa, obter um cartão SIM ou abrir conta bancária sem ele.</p>
+    <p class='mb-4'>Se estiver fora da UE, normalmente precisa de um **Representante Fiscal**. Em Lisboa, pode obtê-lo numa Loja do Cidadão, mas algumas conservatórias são muito mais rápidas que outras.</p>`
+  }
+},
+
+{
+  id: 'open-bank-account-portugal',
+  stage: 'prepare',
+  category: { en: 'Finance', tr: 'Finans', pt: 'Finanças' },
+  source: 'Banco de Portugal / Experience',
+  date: '24.04.2026',
+  title: { en: 'Opening a Bank Account as an Expat', tr: 'Yabancılar İçin Banka Hesabı Açmak', pt: 'Abrir conta bancária como estrangeiro' },
+  content: {
+    en: `<p class='mb-4'>Traditional banks like CGD or Millennium BCP often ask for many documents. For a faster start, consider digital-friendly options like **Moey!** (by Crédito Agrícola).</p>
+    <p class='mb-4'>You will need: NIF, Proof of Address (can be from Turkey for the first account), and Proof of Income/Employment.</p>`,
+    tr: `<p class='mb-4'>CGD veya Millennium BCP gibi geleneksel bankalar genellikle çok fazla belge ister. Daha hızlı bir başlangıç için **Moey!** gibi dijital dostu seçenekleri değerlendirebilirsiniz.</p>
+    <p class='mb-4'>Gerekli belgeler: NIF, Adres İspatı (ilk hesap için Türkiye'deki adresiniz kabul edilebilir) ve Gelir/İş belgesi.</p>`,
+    pt: `<p class='mb-4'>Bancos tradicionais como a CGD ou o Millennium BCP pedem muitas vezes muitos documentos. Para um início mais rápido, considere opções digitais como o **Moey!**.</p>
+    <p class='mb-4'>Irá precisar de: NIF, Comprovativo de Morada e Comprovativo de Rendimentos/Trabalho.</p>`
+  }
+},
+
+
+
+{
 id: 'apostille-documents-turkey',
 stage: 'discover',
 category: { en: 'Legal & NIF', tr: 'Yasal & NIF', pt: 'Legal e NIF' },
